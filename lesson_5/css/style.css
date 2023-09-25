@@ -40,7 +40,7 @@ body {
 	color: #37393f;
 	font-size: 30px;
 	font-weight: 600;
-	line-height: 127%;
+	line-height: 1.27;
 }
 .advantages__text:not(:last-child) {
 	margin-bottom: 42px;
