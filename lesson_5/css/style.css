@@ -40,7 +40,7 @@ body {
 	color: #37393f;
 	font-size: 30px;
 	font-weight: 600;
-	line-height: 127%;
+	line-height: 1.27;
 }
 .advantages__text:not(:last-child) {
 	margin-bottom: 42px;
@@ -54,6 +54,10 @@ body {
 	margin-bottom: 40px;
 }
 .project-information {
+}
+.project-information__title {
+	font-size: 40px;
+	font-weight: 700;
 }
 .project-information__title:not(:last-child) {
 	margin-bottom: 13px;
