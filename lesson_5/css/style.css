@@ -30,8 +30,6 @@ body {
 .page__advantages:not(:last-child) {
 	margin-bottom: 40px;
 }
-.advantages {
-}
 .advantages__title:not(:last-child) {
 	margin-bottom: 12px;
 }
@@ -55,16 +53,12 @@ body {
 .page__project-information:not(:last-child) {
 	margin-bottom: 40px;
 }
-.project-information {
-}
 .project-information__title {
 	font-size: 40px;
 	font-weight: 700;
 }
 .project-information__title:not(:last-child) {
 	margin-bottom: 13px;
-}
-.title {
 }
 .project-information__text p:not(:last-child) {
 	margin-bottom: 30px;
@@ -82,8 +76,6 @@ body {
 }
 
 /*===========================================================*/
-.page__practice {
-}
 .practice__title {
 	font-family: "Berndal", serif;
 	font-weight: 700;
