@@ -41,6 +41,7 @@ body {
 	font-size: 30px;
 	font-weight: 600;
 	line-height: 1.27;
+	text-transform:capitalize;
 }
 .advantages__text:not(:last-child) {
 	margin-bottom: 42px;
@@ -48,6 +49,7 @@ body {
 .title--blue {
 	color: #6b77e5;
 	font-size: 20px;
+	text-transform:none;
 }
 /*===========================================================*/
 .page__project-information:not(:last-child) {
