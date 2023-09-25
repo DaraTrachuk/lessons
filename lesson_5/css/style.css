@@ -1,0 +1,122 @@
+/* ========================= ШРИФТИ =============================== */
+
+/*------------------- Підключення шрифтів ------------------------- */
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:600,700&display=swap");
+/* Підключення вручну */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	color: #7d7d7d;
+	line-height: 1.44; /* 26/18 */
+	font-weight: 400;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+[class*="__container"] {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+/*===========================================================*/
+.page__advantages:not(:last-child) {
+	margin-bottom: 40px;
+}
+.advantages {
+}
+.advantages__title:not(:last-child) {
+	margin-bottom: 12px;
+}
+.title {
+	font-family: "Poppins", sans-serif;
+	color: #37393f;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 127%;
+}
+.advantages__text:not(:last-child) {
+	margin-bottom: 42px;
+}
+.title--blue {
+	color: #6b77e5;
+	font-size: 20px;
+}
+/*===========================================================*/
+.page__project-information:not(:last-child) {
+	margin-bottom: 40px;
+}
+.project-information {
+}
+.project-information__title:not(:last-child) {
+	margin-bottom: 13px;
+}
+.title {
+}
+.project-information__text p:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.project-information__text:not(:last-child),
+.project-information__list:not(:last-child),
+.project-information__list-number:not(:last-child) {
+	margin-bottom: 35px;
+}
+.list-project {
+}
+.list-project__item:not(:last-child),
+.list-number-project__item:not(:last-child) {
+	margin-bottom: 25px;
+}
+.list-number-project {
+}
+/*===========================================================*/
+.page__practice {
+}
+.practice__title {
+	font-family: "Berndal", serif;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 1.2;
+	color: #000;
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 3px 5px #123bb5;
+	text-transform: uppercase;
+}
+.practice__title:not(:last-child) {
+	margin-bottom: 35px;
+}
+.practice__block-text-first {
+	font-family: "Berndal", serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.1;
+	color: rgba(0, 0, 0, 0.589);
+	text-align: right;
+	text-decoration: overline;
+	text-transform: capitalize;
+	letter-spacing: 5px;
+}
+.practice__block-text-first:not(:last-child) {
+	margin-bottom: 35px;
+}
+.practice__block-text-second {
+	font-family: "Beauty Valentinos Regular", serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.3;
+	color: #000;
+	text-align: justify;
+	text-decoration: line-through;
+	text-transform: lowercase;
+	word-spacing: 5px;
+	text-indent: 25px;
+}
