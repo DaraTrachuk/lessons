@@ -40,7 +40,7 @@ body {
 	color: #37393f;
 	font-size: 30px;
 	font-weight: 600;
-	line-height: 1.27;
+	line-height: 127%;
 }
 .advantages__text:not(:last-child) {
 	margin-bottom: 42px;
@@ -69,14 +69,12 @@ body {
 .project-information__list-number:not(:last-child) {
 	margin-bottom: 35px;
 }
-.list-project {
-}
+
 .list-project__item:not(:last-child),
 .list-number-project__item:not(:last-child) {
 	margin-bottom: 25px;
 }
-.list-number-project {
-}
+
 /*===========================================================*/
 .page__practice {
 }
@@ -104,7 +102,8 @@ body {
 	text-transform: capitalize;
 	letter-spacing: 5px;
 }
-.practice__block-text-first:not(:last-child) {
+.practice__block-text-first:not(:last-child),
+.practice__block-text-second:not(:last-child) {
 	margin-bottom: 35px;
 }
 .practice__block-text-second {
@@ -116,4 +115,11 @@ body {
 	text-transform: lowercase;
 	word-spacing: 5px;
 	text-indent: 25px;
+}
+.practice__block-text-third {
+	font-family: "Berndal Italic", serif;
+	font-weight: 700;
+	font-size: 25px;
+	color: blueviolet;
+	text-align: center;
 }

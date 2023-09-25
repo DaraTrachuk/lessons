@@ -18,6 +18,15 @@
 	font-style: normal;
 	font-display: swap;
 }
+@font-face {
+	font-family: "Berndal Italic";
+	src:
+		url("../fonts/BerndalLTStd-Italic.woff2") format("woff2"),
+		url("../fonts/BerndalLTStd-Italic.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 
 @font-face {
 	font-family: "Beauty Valentinos Regular";
