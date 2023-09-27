@@ -1,0 +1,238 @@
+/* Пыдключення файлу шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 20px;
+	color: #474747;
+	line-height: 1.8;
+}
+
+[class*="__container"] {
+	max-width: 1199px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+/* ===================================================================== */
+.page__development {
+	background: #fff9f4;
+	padding: 140px 0;
+}
+.development__container {
+	font-size: 0;
+}
+.development__body,
+.development__images {
+	display: inline-block;
+	vertical-align: top;
+}
+.development__body {
+	padding: 21px 0;
+	max-width: 563px;
+	margin-right: 38px;
+}
+.body-development__sub-title {
+	color: #d06b00;
+	font-size: 28px;
+	line-height: 1.21; /* 34/28 */
+	text-transform: uppercase;
+}
+.body-development__sub-title:not(:last-child) {
+	margin-bottom: 13px;
+}
+.body-development__title {
+	color: #0e333d;
+	font-family: "DM Serif Text", serif;
+	font-size: 59px;
+	line-height: 1.46;
+	text-transform: capitalize;
+}
+.body-development__title:not(:last-child) {
+	margin-bottom: 25px;
+}
+.body-development__text {
+	font-size: 20px;
+}
+.development__images {
+	/* max-width: 568px; */
+	overflow: hidden;
+}
+
+.development__images img {
+	max-width: 273px;
+	min-height: 518px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.development__images img:not(:last-child) {
+	margin-right: 22px;
+	font-size: 20px;
+}
+/* ===================================================================== */
+.page__consulting {
+	padding: 150px 0px 50px 0px;
+}
+.consulting__container {
+	max-width: 722px;
+}
+.consulting__image {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.consulting__image img {
+	max-width: 692px;
+	min-height: 453px;
+	object-fit: cover;
+}
+.consulting__image:not(:last-child) {
+	margin-bottom: 37px;
+}
+.consulting__content:not(:last-child) {
+	margin-bottom: 38px;
+}
+.content-consulting__title {
+	text-transform: capitalize;
+}
+.content-consulting__title:not(:last-child) {
+	margin-bottom: 12px;
+}
+.title {
+	font-family: "Poppins", sans-serif;
+	font-size: 30px;
+	color: #37393f;
+	font-weight: 600;
+	line-height: 1.27;
+}
+.content-consulting__text:not(:last-child) {
+	margin-bottom: 42px;
+}
+.text {
+	color: #7d7d7d;
+	font-size: 18px;
+	line-height: 1.46;
+	text-align: justify;
+}
+.title--small {
+	font-size: 25px;
+}
+.title--blue {
+	color: #6b77e5;
+	font-size: 20px;
+	text-transform: none;
+}
+.title--green {
+	color: #40ddb6;
+	font-size: 20px;
+}
+.benefits-consulting__sub-title:not(:last-child) {
+	margin-bottom: 21px;
+}
+.benefits-consulting__content {
+	font-size: 0;
+}
+.benefits-consulting__body,
+.benefits-consulting__image {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 332px;
+}
+
+.benefits-consulting__image {
+	overflow: hidden;
+}
+.benefits-consulting__image img {
+	max-width: 331px;
+	min-height: 262px;
+	object-fit: cover;
+}
+.benefits-consulting__image:not(:last-child) {
+	margin-right: 29px;
+}
+.benefits-consulting__title:not(:last-child) {
+	margin-bottom: 15px;
+}
+.list-benefits__item {
+	color: #7d7d7d;
+	font-size: 18px;
+	line-height: 1.22; /* 22/18 */
+}
+.list-benefits__item:not(:last-child) {
+	margin-bottom: 35px;
+}
+/* ===================================================================== */
+[class*="__block"] {
+	background-color: rgb(109, 109, 196);
+}
+
+[class*="__inline"] {
+	background-color: greenyellow;
+	display: inline-block;
+}
+
+[class*="__inline-block"] {
+	background-color: orangered;
+}
+.page__training {
+	padding: 50px 0;
+}
+.training__title {
+	text-align: center;
+}
+.training__title:not(:last-child) {
+	margin-bottom: 35px;
+}
+.training__padding:not(:last-child),
+.training__margin:not(:last-child),
+.training__width:not(:last-child),
+.training__hight:not(:last-child) {
+	margin-bottom: 30px;
+}
+/* Padding */
+.padding__block {
+	padding: 30px 20px 30px 20px;
+}
+.padding__inline {
+	padding: 25px 10px;
+}
+.padding__inline-block {
+	padding: 50px;
+}
+/* Margin */
+.margin__block {
+	margin-top: 35px;
+	margin-bottom: 45px;
+	margin-left: 25px;
+	margin-right: 15px;
+}
+.margin__inline {
+	margin: 30px;
+}
+.margin__inline-block {
+	margin: -60px 25px 15px;
+}
+/* Width */
+.width__block {
+	max-width: 200px;
+}
+.width__inline {
+	min-width: 150px;
+}
+.width__inline-block {
+	width: 100px;
+}
+/* Hight, Overflow, Vertical-align */
+.hight__block {
+	height: 350px;
+	overflow: scroll;
+}
+.hight__inline {
+	min-height: 250px;
+}
+.hight__inline-block {
+	max-height: 150px;
+	vertical-align: bottom;
+}
