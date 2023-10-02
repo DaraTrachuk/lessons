@@ -315,3 +315,68 @@ body {
 .clothing__button:hover {
 	color: #8a33fd;
 }
+/* ============================================================== */
+.page__practice {
+	padding-bottom: 100px;
+}
+[class*="__block"]:not(:last-child),
+[class*="__inline"]:not(:last-child),
+[class*="__inline-block"]:not(:last-child) {
+	margin-bottom: 30px;
+}
+[class*="__block"] {
+	font-size: 18px;
+	background-color: #e36c0a;
+}
+[class*="__inline"] {
+	display: inline-block;
+	font-size: 18px;
+	background-color: #0060f1;
+}
+[class*="__inline-block"] {
+	background-color: #77608d;
+}
+.practice__container {
+	color: #fff;
+	font-size: 0;
+}
+/* Border */
+.practice__block-border {
+	border: 8px solid rgb(45, 234, 11);
+}
+.practice__inline-border {
+	border: 10px dotted rgb(234, 11, 11);
+}
+.practice__inline-border:not(:last-child),
+.practice__inline-outline:not(:last-child) {
+	margin-right: 30px;
+}
+.practice__inline-block-border {
+	border: 15px dashed rgb(236, 236, 16);
+}
+/* Outline */
+.practice__block-outline {
+	outline: 5px solid rgb(187, 230, 15);
+}
+.practice__inline-outline {
+	outline: 10px dashed rgb(43, 3, 245);
+}
+.practice__inline-block-outline {
+	outline: 2px dotted rgb(245, 3, 176);
+}
+/* Border-radius */
+.practice__block-border-radius {
+	border-radius: 30px;
+	box-shadow: 15px 10px 20px 5px #000;
+}
+.practice__inline-border-radius {
+	border-radius: 20px;
+	padding: 8px 15px;
+	visibility: hidden;
+}
+.practice__inline-block-border-radius {
+	border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	opacity: 0.5;
+}
