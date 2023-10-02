@@ -319,12 +319,12 @@ body {
 .page__practice {
 	padding-bottom: 100px;
 }
-[class*="__block"]:not(:last-child),
+[class*="__blok"]:not(:last-child),
 [class*="__inline"]:not(:last-child),
-[class*="__inline-block"]:not(:last-child) {
+[class*="__inline-blok"]:not(:last-child) {
 	margin-bottom: 30px;
 }
-[class*="__block"] {
+[class*="__blok"] {
 	font-size: 18px;
 	background-color: #e36c0a;
 }
@@ -333,7 +333,7 @@ body {
 	font-size: 18px;
 	background-color: #0060f1;
 }
-[class*="__inline-block"] {
+[class*="__inline-blok"] {
 	background-color: #77608d;
 }
 .practice__container {
@@ -341,7 +341,7 @@ body {
 	font-size: 0;
 }
 /* Border */
-.practice__block-border {
+.practice__blok-border {
 	border: 8px solid rgb(45, 234, 11);
 }
 .practice__inline-border {
@@ -351,21 +351,21 @@ body {
 .practice__inline-outline:not(:last-child) {
 	margin-right: 30px;
 }
-.practice__inline-block-border {
+.practice__inline-blok-border {
 	border: 15px dashed rgb(236, 236, 16);
 }
 /* Outline */
-.practice__block-outline {
+.practice__blok-outline {
 	outline: 5px solid rgb(187, 230, 15);
 }
 .practice__inline-outline {
 	outline: 10px dashed rgb(43, 3, 245);
 }
-.practice__inline-block-outline {
+.practice__inline-blok-outline {
 	outline: 2px dotted rgb(245, 3, 176);
 }
 /* Border-radius */
-.practice__block-border-radius {
+.practice__blok-border-radius {
 	border-radius: 30px;
 	box-shadow: 15px 10px 20px 5px #000;
 }
@@ -374,7 +374,7 @@ body {
 	padding: 8px 15px;
 	visibility: hidden;
 }
-.practice__inline-block-border-radius {
+.practice__inline-blok-border-radius {
 	border-radius: 50%;
 	width: 400px;
 	height: 400px;
