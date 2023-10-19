@@ -392,7 +392,7 @@ body {
 .fifth:hover ~ .sixth,
 .sixth:hover,
 .sixth:hover ~ .finish,
-.finish {
+.finish:hover {
 	visibility: visible;
 }
 
