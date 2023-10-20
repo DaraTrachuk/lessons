@@ -231,6 +231,13 @@ body {
 .item-cards-work__image:not(:last-child) {
 	margin-bottom: -36px;
 }
+.item-cards-work__image img {
+	max-width: 72px;
+	min-height: 72px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 50%;
+}
 .item-cards-work__title:not(:last-child) {
 	margin-bottom: 16px;
 }
