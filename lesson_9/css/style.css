@@ -217,20 +217,19 @@ body {
 	font-size: 0;
 }
 .cards-work__item {
-	background: #f4f4f4;
 	max-width: 386px;
-	padding: 58px 43px;
 	display: inline-block;
 	text-align: center;
+}
+.item-cards-work__wrapper {
+	background: #f4f4f4;
+	padding: 58px 43px;
 }
 .cards-work__item:not(:last-child) {
 	margin-right: 31px;
 }
-.item-cards-work__image {
-	margin-top: -96px;
-}
 .item-cards-work__image:not(:last-child) {
-	margin-bottom: 22px;
+	margin-bottom: -36px;
 }
 .item-cards-work__title:not(:last-child) {
 	margin-bottom: 16px;
