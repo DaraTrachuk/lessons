@@ -1,0 +1,236 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #37393f;
+}
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+[class*="__container"] {
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+/* ======================================================= */
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	min-height: 185px;
+	z-index: 50;
+}
+.header__top-bar {
+	background-color: #37393f;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.21; /* 17/14 */
+	padding-top: 19px;
+	padding-bottom: 19px;
+}
+.top-bar-header {
+}
+.top-bar-header__container {
+}
+.top-bar-header__left-section {
+	display: inline-block;
+	font-size: 0;
+}
+.top-bar-header__left-section:not(:last-child) {
+	margin-right: 365px;
+}
+.top-bar-header__location {
+	display: inline-block;
+	font-size: 14px;
+}
+.top-bar-header__location:not(:last-child) {
+	margin-right: 42px;
+}
+.top-bar-header__location::before {
+	content: "";
+	background: url(../img/header/top-bar/location.svg) 0 0 / contain no-repeat;
+	width: 16px;
+	height: 22px;
+	vertical-align: middle;
+	margin-right: 9px;
+	text-transform: capitalize;
+}
+.top-bar-header__mail {
+	display: inline-block;
+	font-size: 14px;
+	transition: text-decoration 0.3s ease;
+}
+.top-bar-header__mail:hover {
+	text-decoration: underline;
+}
+.top-bar-header__mail::before {
+	content: "";
+	background: url(../img/header/top-bar/mail.svg) 0 0 / contain no-repeat;
+	width: 20px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 11px;
+}
+.top-bar-header__right-section {
+	display: inline-block;
+	font-size: 0;
+}
+.top-bar-header__schedule {
+	display: inline-block;
+	font-size: 14px;
+}
+.top-bar-header__schedule:not(:last-child) {
+	margin-right: 50px;
+}
+.top-bar-header__schedule::before {
+	content: "";
+	background: url(../img/header/top-bar/time.svg) 0 0 / contain no-repeat;
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+.top-bar-header__social {
+	display: inline-block;
+	font-size: 0;
+}
+.social-top-bar {
+}
+.social-top-bar__item {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	transition: transform 0.3s linear;
+	font-size: 14px;
+}
+.social-top-bar__item:hover {
+	transform: scale(1.1);
+}
+.social-top-bar__item img {
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.social-top-bar__item:not(:last-child) {
+	margin-right: 16px;
+}
+/* ======================================================= */
+.header__container {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 0;
+}
+.header__logo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	height: 38px;
+	overflow: hidden;
+	position: relative;
+	font-size: 14px;
+}
+.header__logo:not(:last-child) {
+	margin-right: 195px;
+}
+.header__logo img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.logo {
+}
+.header__menu {
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 601px;
+}
+.header__menu:not(:last-child) {
+	margin-right: 40px;
+}
+.menu {
+}
+.menu__list {
+}
+.menu__item {
+	display: inline-block;
+	text-transform: capitalize;
+	position: relative;
+}
+.menu__item--parent::after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	right: -20px;
+	background: url(../img/header/header-main/arrow_down.svg) 0 0 no-repeat;
+	width: 10px;
+	height: 7px;
+}
+.menu__item:not(:last-child) {
+	margin-right: 44px;
+}
+.menu__link {
+	/* position: relative; */
+	display: inline-block;
+	font-size: 18px;
+}
+.menu__item::before {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	width: 0%;
+	right: 0%;
+	height: 2px;
+	background-color: #6b77e5;
+	border-radius: 5px;
+	transition: all 0.4s ease;
+}
+.menu__item:hover::before {
+	width: 100%;
+	left: 0%;
+}
+
+.header__button {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 21px 35px 22px 35px;
+	text-align: center;
+	background-color: #6b77e5;
+	color: #fff;
+	text-align: center;
+	font-family: "Cabin", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.22; /* 22/18 */
+	text-transform: capitalize;
+	transition: background-color 0.3s ease;
+}
+.header__button:hover {
+	background-color: #40ddb6;
+}
+.button {
+}
+
+.menu__sub-menu {
+}
+.sub-menu {
+}
+.sub-menu__item {
+}
+.sub-menu__link {
+}
