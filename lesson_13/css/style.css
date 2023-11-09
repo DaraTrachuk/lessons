@@ -1,0 +1,163 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 18px;
+}
+.wrapper {
+}
+[class*="__container"] {
+	max-width: 1900px;
+	margin: 0 auto;
+	padding: 30px 15px;
+}
+/* ====================================================== */
+.tank__title {
+	text-align: center;
+	font-size: 90px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+.tank {
+	position: relative;
+}
+.tank__top {
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.main__armored {
+	width: 465px;
+	height: 255px;
+	border-radius: 24% 24% 0% 0% / 100% 99% 10% 10%;
+	border: 5px solid #000;
+	background: rgb(130, 125, 58);
+	background: linear-gradient(41deg, rgba(130, 125, 58, 1) 0%, rgba(69, 66, 20, 1) 44%, rgba(174, 167, 85, 1) 100%);
+	position: relative;
+}
+.main__armored::after {
+	content: "";
+	width: 140px;
+	height: 90px;
+	position: absolute;
+	background: url(../img/gerb.png) center / contain no-repeat;
+	top: 65px;
+	left: 225px;
+	border: 5px solid #000;
+	border-radius: 5px;
+}
+.armored__top {
+	height: 60px;
+	width: 265px;
+	position: absolute;
+	top: -60px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 15% 15% 0% 0% / 100% 100% 0% 0%;
+	background: rgb(130, 125, 58);
+	background: linear-gradient(270deg, rgba(130, 125, 58, 1) 0%, rgba(69, 66, 20, 1) 44%, rgba(174, 167, 85, 1) 100%);
+	border: 5px solid #000;
+	border-bottom: 0;
+}
+.armored__left {
+	height: 200px;
+	width: 150px;
+	position: absolute;
+	z-index: -1;
+	top: 30px;
+	left: -50px;
+	transform: rotate(10deg);
+	border: 5px solid #000;
+	border-radius: 59% 0% 10% 63% / 50% 10% 0% 50%;
+	background: rgb(130, 125, 58);
+	background: linear-gradient(270deg, rgba(130, 125, 58, 1) 0%, rgba(69, 66, 20, 1) 44%, rgba(174, 167, 85, 1) 100%);
+	border-bottom: 0;
+}
+.armored__right {
+	width: 600px;
+	height: 80px;
+	background: rgb(130, 125, 58);
+	background: linear-gradient(0deg, rgba(130, 125, 58, 1) 0%, rgba(69, 66, 20, 1) 44%, rgba(174, 167, 85, 1) 100%);
+	border: 5px solid #000;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	position: absolute;
+	left: 450px;
+	top: 65px;
+	transform: rotate(-5deg);
+	z-index: -1;
+}
+.armored__right::before {
+	content: "";
+	width: 70px;
+	height: 170px;
+	border-radius: 0% 100% 100% 0% / 0% 50% 50% 100%;
+	background: rgb(130, 125, 58);
+	background: linear-gradient(0deg, rgba(130, 125, 58, 1) 0%, rgba(69, 66, 20, 1) 44%, rgba(174, 167, 85, 1) 100%);
+	border: 5px solid #000;
+	position: absolute;
+	left: -35px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.armored__bottom {
+	width: 325px;
+	height: 40px;
+	background-color: #252d25;
+	position: relative;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border: 5px solid #000;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.tank__body {
+	width: 840px;
+	height: 350px;
+	background: #000;
+	/* background: linear-gradient(270deg, rgba(130, 125, 58, 1) 0%, rgba(69, 66, 20, 1) 44%, rgba(174, 167, 85, 1) 100%); */
+	clip-path: polygon(0% 99%, 0% 31%, 17% 0%, 100% 0%, 100% 100%);
+	position: absolute;
+	top: 595px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.tank__body::before {
+	content: "";
+	background: rgb(130, 125, 58);
+	background: linear-gradient(5deg, rgba(130, 125, 58, 1) 0%, rgba(69, 66, 20, 1) 44%, rgba(174, 167, 85, 1) 100%);
+	clip-path: polygon(0% 99%, 0% 31%, 17% 0%, 100% 0%, 100% 100%);
+	width: 830px;
+	height: 338px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+.tank__bottom {
+	border-radius: 28% 28% 28% 28% / 50% 50% 50% 50%;
+	background: rgb(125, 145, 136);
+	background: linear-gradient(180deg, rgba(125, 145, 136, 1) 0%, rgba(130, 145, 145, 1) 20%, rgba(84, 81, 102, 1) 100%);
+	width: 1050px;
+	height: 250px;
+	outline: 50px dashed #252d25;
+	position: absolute;
+	top: 850px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.tank__bottom::after {
+	content: "";
+	background: url(../img/w.png) 0 0 / cover;
+	background-repeat: repeat-x;
+	width: 200px;
+	height: 200px;
+}
