@@ -285,36 +285,36 @@ body {
 .practice__title-block:not(:last-child) {
 	margin-bottom: 30px;
 }
-.practice__translate div,
-.practice__scale div,
-.practice__rotate div,
-.practice__skew div,
-.practice__matrix div,
-.practice__transform-origin div,
-.practice__perspective-origin div,
-.practice__translate3D div,
-.practice__scale3D div,
-.practice__matrix3D div,
-.practice__rotate3D div,
-.practice__transform-style div {
+.practice__translate .block__item,
+.practice__scale .block__item,
+.practice__rotate .block__item,
+.practice__skew .block__item,
+.practice__matrix .block__item,
+.practice__transform-origin .block__item,
+.practice__perspective-origin .block__item,
+.practice__translate3D .block__item,
+.practice__scale3D .block__item,
+.practice__matrix3D .block__item,
+.practice__rotate3D .block__item,
+.practice__transform-style .block__item {
 	transition: transform 0.5s ease;
 }
-.practice__translate div:hover {
+.practice__translate .block__item:hover {
 	transform: translate(10px, 35px);
 }
-.practice__scale div:hover {
+.practice__scale .block__item:hover {
 	transform: scale(1.2);
 }
-.practice__rotate div:hover {
+.practice__rotate .block__item:hover {
 	transform: rotate(360deg);
 }
-.practice__skew div:hover {
+.practice__skew .block__item:hover {
 	transform: skew(-50deg, 10deg);
 }
-.practice__matrix div:hover {
+.practice__matrix .block__item:hover {
 	transform: translate(35px, 20px) scale(1.3) rotate(-90deg) skew(45deg);
 }
-.practice__transform-origin div:hover {
+.practice__transform-origin .block__item:hover {
 	transform: rotate(-90deg);
 	transform-origin: 50px 35px;
 }
@@ -322,26 +322,26 @@ body {
 	perspective-origin: center;
 	perspective: 800px;
 }
-.practice__perspective-origin div:hover {
+.practice__perspective-origin .block__item:hover {
 	transform: rotateX(50deg);
 }
-.practice__translate3D div:hover {
+.practice__translate3D .block__item:hover {
 	transform: translate3D(35px, 40px, 5px);
 }
-.practice__scale3D div:hover {
+.practice__scale3D .block__item:hover {
 	transform: scale3d(2, 2, 2);
 }
-.practice__matrix3D div:hover {
+.practice__matrix3D .block__item:hover {
 	transform: translate3d(15px, 20px, 20px) rotate3d(1, 1, 1, 15deg);
 }
-.practice__rotate3D div:hover {
+.practice__rotate3D .block__item:hover {
 	transform: rotate3d(1, 2, 1, 50deg);
 }
 .practice__transform-style {
 	perspective: 200px;
 	transform-style: preserve-3d;
 }
-.practice__transform-style div:hover {
+.practice__transform-style .block__item:hover {
 	transform: rotateX(70deg);
 }
 .block__body-backface-visibility {
