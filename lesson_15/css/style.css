@@ -1,0 +1,162 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+	font-family: "Causten", sans-serif;
+	font-size: 18px;
+	color: #807d7e;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-width: 1270px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.button {
+	display: inline-flex;
+	padding: 12px 48px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background-color: #8a33fd;
+	color: #fff;
+	font-weight: 500;
+	line-height: 1.22; /* 22/18 */
+	text-transform: capitalize;
+	transition: background-color 0.3s ease;
+}
+.button:hover {
+	background-color: #4c2184;
+}
+.button--border {
+	border: 1px solid #3c4242;
+	background-color: transparent;
+	color: #8a33fd;
+	transition: all 0.3s ease;
+}
+.button--border:hover {
+	border: 1px solid transparent;
+	color: #fff;
+}
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	width: 100%;
+	border-bottom: 1px solid #bebcbd;
+}
+.header__container {
+	/* відступ безпеки */
+	padding: 5px 0;
+	display: flex;
+	align-items: center;
+	min-height: 111px;
+	/* відступ безпеки */
+	gap: 10px;
+}
+.header__logo {
+	min-width: 92px;
+	min-height: 45px;
+	position: relative;
+}
+.header__logo img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.logo {
+}
+.header__search {
+	padding-left: 164px;
+	flex: 1 1 auto;
+}
+.search-header {
+	display: inline-flex;
+	align-items: center;
+	max-width: 184px;
+	gap: 12px;
+	padding: 12px 48px;
+	justify-content: center;
+	border-radius: 8px;
+	background-color: #f6f6f6;
+}
+.search-header__button {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	background-color: transparent;
+}
+.search-header__input {
+	flex: 0 0 56px;
+	max-width: 56px;
+	height: 22px;
+	background-color: #f6f6f6;
+}
+.search-header__input::placeholder {
+	font-family: "Causten", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.22; /* 22/18 */
+	text-align: center;
+}
+
+.header__action {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 67px;
+	row-gap: 5px;
+}
+.action-header {
+}
+.select-header__form {
+	position: relative;
+}
+.action-header__lang {
+	padding-right: 19px;
+	appearance: none;
+	font-family: "Causten", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.22;
+	color: #333;
+	flex: 0 1 200px;
+}
+.action-header__lang option {
+	background-color: #f6f6f6;
+}
+.select-header__form::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(0, -50%);
+	background: url(../img/header/header-arrow.svg) center no-repeat;
+	width: 10px;
+	height: 10px;
+}
+.action-header__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 29px;
+	row-gap: 5px;
+}
