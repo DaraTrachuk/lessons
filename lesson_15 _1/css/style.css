@@ -1,0 +1,146 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+	font-family: "Causten", sans-serif;
+	font-size: 18px;
+	color: #807d7e;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-width: 1270px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+/* ===================================================================================== */
+.button {
+	display: inline-flex;
+	padding: 12px 48px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background-color: #8a33fd;
+	color: #fff;
+	font-weight: 500;
+	line-height: 1.22; /* 22/18 */
+}
+.button--border {
+	background-color: transparent;
+	color: #8a33fd;
+	border: 1px solid #3c4242;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	width: 100%;
+	border-bottom: 1px solid #bebcbd;
+	background-color: #fff;
+}
+.header__container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	column-gap: 15px;
+	min-height: 111px;
+}
+.header__logo {
+	flex: 0 0 93px;
+	min-height: 45px;
+	position: relative;
+	overflow: hidden;
+}
+.header__logo img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.header__search {
+	flex: 0 1 497px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.searh-header {
+}
+.searh-header__wrapper {
+	padding: 12px 48px;
+	border-radius: 8px;
+	background: #f6f6f6;
+	display: inline-flex;
+	gap: 12px;
+}
+.searh-header__button {
+}
+.searh-header__form {
+}
+.searh-header__input {
+	background: #f6f6f6;
+}
+.searh-header__input::placeholder {
+	font-family: "Causten", sans-serif;
+	font-size: 18px;
+	color: #807d7e;
+}
+.header__actons {
+	flex: 0 1 620px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	column-gap: 60px;
+}
+.actions-header {
+}
+.actions-header__select-lang {
+}
+
+.lang-select {
+}
+.lang-select__list {
+	position: relative;
+	padding-right: 36px;
+}
+.lang-select__list::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(0, -50%);
+	background: url(../img/header/header-arrow.svg) center no-repeat;
+	width: 24px;
+	height: 24px;
+}
+
+.lang-select__item {
+	color: #333;
+	line-height: 1.22; /* 22/18 */
+}
+.actions-header__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 29px;
+}
+.actions-buttons {
+}
+.actions-buttons__button {
+}
