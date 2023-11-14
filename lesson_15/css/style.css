@@ -37,6 +37,8 @@ body {
 	line-height: 1.22; /* 22/18 */
 	text-transform: capitalize;
 	transition: background-color 0.3s ease;
+	cursor: pointer;
+	font-size: 18px;
 }
 .button:hover {
 	background-color: #4c2184;
@@ -47,10 +49,36 @@ body {
 	color: #8a33fd;
 	transition: all 0.3s ease;
 }
+.button--text-transform {
+	text-transform: none;
+	padding: 14px 28px;
+}
 .button--border:hover {
 	border: 1px solid transparent;
 	color: #fff;
 }
+.main-title {
+	font-family: "Core Sans C", sans-serif;
+	color: #3c4242;
+	text-transform: capitalize;
+}
+
+.title {
+	font-size: 22px;
+	line-height: 1.18; /* 26/22 */
+	letter-spacing: 0.44px;
+	color: #3c4242;
+}
+.title--bold {
+	font-weight: 700;
+}
+.value {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.18;
+	letter-spacing: 0.44px;
+}
+/* =============================================================================================== */
 .header {
 	position: fixed;
 	top: 0;
@@ -58,10 +86,11 @@ body {
 	z-index: 50;
 	width: 100%;
 	border-bottom: 1px solid #bebcbd;
+	background-color: #fff;
 }
 .header__container {
 	/* відступ безпеки */
-	padding: 5px 0;
+	padding: 10px 0;
 	display: flex;
 	align-items: center;
 	min-height: 111px;
@@ -93,7 +122,7 @@ body {
 	align-items: center;
 	max-width: 184px;
 	gap: 12px;
-	padding: 12px 48px;
+	padding: 12px 41px;
 	justify-content: center;
 	border-radius: 8px;
 	background-color: #f6f6f6;
@@ -105,8 +134,8 @@ body {
 	background-color: transparent;
 }
 .search-header__input {
-	flex: 0 0 56px;
-	max-width: 56px;
+	flex: 0 0 70px;
+	max-width: 70px;
 	height: 22px;
 	background-color: #f6f6f6;
 }
@@ -139,7 +168,7 @@ body {
 	font-weight: 500;
 	line-height: 1.22;
 	color: #333;
-	flex: 0 1 200px;
+	min-width: 206px;
 }
 .action-header__lang option {
 	background-color: #f6f6f6;
@@ -160,3 +189,238 @@ body {
 	column-gap: 29px;
 	row-gap: 5px;
 }
+/* =============================================================================================== */
+.page {
+}
+.page__men-categories {
+	padding-top: 211px;
+}
+.categories-men {
+}
+.categories-men__container {
+}
+.categories-men__title {
+	position: relative;
+	padding-left: 26px;
+	max-width: 395px;
+	font-size: 34px;
+	letter-spacing: 0.68px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+.categories-men__title::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+	width: 6px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: #8a33fd;
+}
+.categories-men__title:not(:last-child) {
+	margin-bottom: 70px;
+}
+.categories-men__items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+.item-men {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	flex: 0 0 270px;
+}
+.item-men__image {
+	position: relative;
+	overflow: hidden;
+	width: 270px;
+	height: 394px;
+	border-radius: 10px;
+	background-color: #cdcdcd;
+}
+.item-men__image:not(:last-child) {
+	margin-bottom: 15px;
+}
+.item-men__image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.5s ease;
+}
+.item-men__image img:hover {
+	transform: scale(1.2);
+}
+.item-men__body {
+	display: flex;
+	flex-grow: 1;
+}
+.item-men__content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	/* відступ безпеки */
+	padding-right: 10px;
+}
+.item-men__title {
+	color: #2a2f2f;
+	font-weight: 700;
+	line-height: 1.11; /* 20/18 */
+	letter-spacing: -0.715px;
+	flex-grow: 1;
+	font-weight: 600;
+}
+.item-men__title:not(:last-child) {
+	margin-bottom: 4px;
+}
+.item-men__link-title {
+	transition: all 0.3s ease;
+}
+.item-men__link-title:hover {
+	text-decoration: underline;
+	color: #8a33fd;
+}
+.item-men__label {
+}
+.item-men__link {
+	align-self: flex-start;
+	min-height: 20px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 18px;
+	background: url("../img/men-categories/arrow.svg") center no-repeat;
+	transition: transform 0.3s ease;
+}
+.item-men__link:hover {
+	transform: scale(1.1);
+}
+/* =============================================================================================== */
+.page__wishlist {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.wishlist {
+}
+.wishlist__container {
+}
+.wishlist__title {
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.1; /* 31/28 */
+	letter-spacing: 0.56px;
+}
+.wishlist__title:not(:last-child) {
+	margin-bottom: 50px;
+}
+.wishlist__items {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	max-width: 903px;
+}
+.wishlist__item {
+}
+.item-wishlist {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 36px;
+	padding-bottom: 30px;
+}
+.item-wishlist:not(:last-child) {
+	border-bottom: 1px solid #edeef2;
+}
+.item-wishlist__button-close {
+	background-color: transparent;
+	cursor: pointer;
+	width: 22px;
+	height: 22px;
+}
+.item-wishlist__content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+.item-wishlist__image {
+	position: relative;
+	width: 110px;
+	min-height: 110px;
+	overflow: hidden;
+	border-radius: 4px;
+	background-color: #cdcdcd;
+}
+.item-wishlist__image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.3s ease;
+}
+.item-wishlist__image img:hover {
+	transform: scale(1.2);
+}
+.item-wishlist__body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+.item-wishlist__link-title {
+	transition: all 0.3s ease;
+}
+.item-wishlist__link-title:hover {
+	text-decoration: underline;
+	color: #8a33fd;
+}
+.item-wishlist__link-title {
+}
+.item-wishlist__color {
+}
+.color-wishlist {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+.color-wishlist__title {
+}
+.color-wishlist__value {
+}
+
+.item-wishlist__quantity {
+}
+.quantity-wishlist {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.quantity-wishlist__value {
+}
+.item-wishlist__cart-information {
+}
+.info-cart {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px;
+	align-items: center;
+}
+.info-cart__price {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.18; /* 26/22 */
+	letter-spacing: 0.44px;
+}
+.info-cart__button {
+}
+/* =============================================================================================== */
