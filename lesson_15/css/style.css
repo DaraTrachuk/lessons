@@ -474,6 +474,11 @@ body {
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 1.18; /* 19/16 */
+	transition: all 0.3s ease;
+}
+.content-item__title:hover {
+	text-decoration: underline;
+	color: #8a33fd;
 }
 .content-item__title:not(:last-child) {
 	margin-bottom: 10px;
