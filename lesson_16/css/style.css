@@ -450,12 +450,16 @@ body {
 	display: inline-block;
 	height: 100%;
 	cursor: pointer;
+	border: 1px solid transparent;
 }
 .card-payment__radio label + img {
 	height: 100%;
 }
 .card-payment__radio input:checked + label {
 	border: 1px solid #3c4242;
+	border-radius: 8px;
+}
+.card-method-first img {
 	border-radius: 8px;
 }
 .method-payment__content {
