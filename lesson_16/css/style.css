@@ -331,23 +331,10 @@ body {
 	width: 18px;
 	height: 18px;
 	flex-shrink: 0;
-	background-color: transparent;
-	border: 1px solid #3c4242;
-	border-radius: 50%;
+	background: url(../img/payment-method/radio_button.svg) center no-repeat;
 }
-.form__radio label::after {
-	content: "";
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background-color: #807d7e;
-	position: absolute;
-	top: 7px;
-	left: 4px;
-	display: none;
-}
-.form__radio input:checked ~ label::after {
-	display: block;
+.form__radio input:checked ~ label::before {
+	background: url(../img/payment-method/radio_button_active.svg) center no-repeat;
 }
 .method-shipping__title {
 	font-size: 22px;
@@ -402,14 +389,9 @@ body {
 	line-height: 1.4; /* 31/22 */
 	letter-spacing: 0.44px;
 }
-/* .method-payment__text {
-	padding-left: 37px;
-} */
-
 .method-payment__text:not(:last-child) {
 	margin-bottom: 30px;
 }
-
 .method-payment__group {
 	display: flex;
 	flex-direction: column;
@@ -458,25 +440,11 @@ body {
 	width: 18px;
 	height: 18px;
 	flex-shrink: 0;
-	background-color: transparent;
-	border: 1px solid #3c4242;
-	border-radius: 50%;
+	background: url(../img/payment-method/radio_button.svg) center no-repeat;
 	margin-left: -37px;
 }
-.method-payment__label::after {
-	content: "";
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background-color: #807d7e;
-	position: absolute;
-	top: 7px;
-	left: 4px;
-	display: none;
-	margin-left: -37px;
-}
-.method-payment__input:checked ~ .method-payment__label::after {
-	display: block;
+.method-payment__input:checked ~ .method-payment__label::before {
+	background: url(../img/payment-method/radio_button_active.svg) center no-repeat;
 }
 .card-payment__radio label {
 	display: inline-block;
