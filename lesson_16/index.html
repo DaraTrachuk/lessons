@@ -238,13 +238,13 @@
 														</fieldset>
 														<div class="method-payment__card-info card-info">
 															<div class="card-info__line">
-																<input required class="card-info__input" id="card-number" autocomplete="off" name="card-number" placeholder="Card number" type="text">
+																<input maxlength="16" minlength="16" required class="card-info__input" id="card-number" autocomplete="off" name="card-number" placeholder="Card number" type="number">
 															</div>
 															<div class="card-info__line">
 																<input required class="card-info__input" id="name-card" autocomplete="off" name="name-card" placeholder="Name of card" type="text">
 															</div>
 															<div class="card-info__line">
-																<input required class="card-info__input" id="date-card" autocomplete="off" name="date-card" placeholder="Expiration date (MM/YY)" type="text">
+																<input maxlength="7" minlength="5" required class="card-info__input" id="date-card" autocomplete="off" name="date-card" placeholder="Expiration date (MM/YY)" type="number">
 															</div>
 															<div class="card-info__line card-info__line--decor">
 																<input required class="card-info__input" id="card-pass" autocomplete="off" name="card-pass" placeholder="Security Code" type="password">
