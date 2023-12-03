@@ -222,7 +222,6 @@ body {
 .product-popular__items {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 	margin: 0 -15px;
 	row-gap: 30px;
 }
