@@ -569,6 +569,9 @@ body {
 	.provide__header-block {
 		text-align: center;
 	}
+		.provide__image {
+		margin: 0 -15px;
+	}
 	.provide__image img {
 		max-width: 100%;
 	}
