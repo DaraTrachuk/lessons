@@ -477,17 +477,18 @@ body {
 }
 .counter-provide__item {
 	background-color: #2e2f34;
-	padding: 27px 30px;
+	padding: 27px 29px;
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	flex: 0 0 297px;
+	flex: 1 1 48.6%;
 }
 .counter-provide__image {
 	flex: 0 0 79px;
 }
 .counter-provide__info {
-	flex: 0 0 auto;
+	/* flex: 0 0 auto; */
+	flex-grow: 1;
 	color: #fff;
 	font-family: "Inter";
 }
@@ -573,15 +574,6 @@ body {
 	}
 	.provide__wrapper {
 		display: block;
-	}
-	.provide__counter,
-	.provide__value {
-		justify-content: center;
-	}
-}
-@media (max-width: 454.98px) {
-	.provide__value {
-		justify-content: flex-start;
 	}
 }
 @media (max-width: 1250px) and (min-width: 320px) {
