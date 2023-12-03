@@ -254,13 +254,16 @@ body {
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 1.4;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	flex-grow: 1;
 }
 .item-product__title {
 	transition: color 0.3s ease;
+	flex: 1 1 auto;
 }
-.item-product__title:not(:last-child) {
-	margin-bottom: 4px;
-}
+
 .product-popular__wrapper-button {
 	display: flex;
 	align-items: center;
@@ -567,7 +570,7 @@ body {
 	.provide__header-block {
 		text-align: center;
 	}
-		.provide__image {
+	.provide__image {
 		margin: 0 -15px;
 	}
 	.provide__image img {
