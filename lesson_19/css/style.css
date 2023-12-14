@@ -1,0 +1,159 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Стилі загальних блоків (компонентів) */
+/* @import url("common.css"); */
+
+/* Основні стилі */
+body {
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+/* Обмежуючий контейнер */
+[class*="__container"] {
+	max-width: 1270px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+/* ============================================================================================================================= */
+.explore {
+	padding-top: 130px;
+	padding-bottom: 50px;
+}
+.explore__container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+}
+.explore__item {
+	display: flex;
+	position: relative;
+	align-items: center;
+	padding: 53px 28px;
+}
+.explore__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+}
+.explore__image img {
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 605 / 355;
+	object-fit: cover;
+	object-position: top;
+	transition: transform 0.5s;
+}
+.explore__body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 264px;
+	z-index: 2;
+}
+.body-explore__label {
+	color: #fff;
+	font-family: "Montserrat";
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 1.67;
+	letter-spacing: 0.251px;
+	text-transform: capitalize;
+}
+.body-explore__label:not(:last-child) {
+	margin-bottom: 24px;
+}
+.body-explore__title:not(:last-child) {
+	margin-bottom: 9px;
+}
+.title {
+	font-family: "Core Sans C";
+	font-size: 34px;
+	font-weight: 800;
+	line-height: 1.32;
+	text-transform: capitalize;
+}
+.title--white {
+	color: #fff;
+}
+.body-explore__sale {
+	color: #fff;
+	font-family: "Core Sans C";
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.56;
+	letter-spacing: 0.251px;
+	text-transform: uppercase;
+}
+.body-explore__sale:not(:last-child) {
+	margin-bottom: 41px;
+}
+.body-explore__button {
+	color: #fff;
+	font-family: "Core Sans C";
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 1.5;
+	text-decoration-line: underline;
+	text-transform: capitalize;
+}
+@media (max-width: 991.98px) {
+	.explore__container {
+		grid-template-columns: auto;
+		gap: 15px;
+	}
+}
+@media (max-width: 425.98px) {
+	.explore__item {
+		padding: 30px 10px;
+	}
+	.explore__item::after {
+		content: "";
+		background-color: rgba(0, 0, 0, 0.4);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 12px;
+	}
+	.body-explore__title {
+		font-size: 24px;
+	}
+	.body-explore__label {
+		font-size: 16px;
+	}
+	.body-explore__sale:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	.body-explore__label:not(:last-child) {
+		margin-bottom: 15px;
+	}
+	.explore__body {
+		max-width: 250px;
+	}
+}
+@media (any-hover: hover) {
+	.explore__item:hover .explore__image img {
+		transform: scale(1.1);
+	}
+}
+/* ============================================================================================================================= */
