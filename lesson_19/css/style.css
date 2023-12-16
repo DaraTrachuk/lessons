@@ -4,9 +4,6 @@
 /* Скидання стилів */
 @import url("reset.css");
 
-/* Стилі загальних блоків (компонентів) */
-/* @import url("common.css"); */
-
 /* Основні стилі */
 body {
 }
@@ -36,6 +33,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 30px;
+	grid-auto-rows: 1fr;
 }
 .explore__item {
 	display: flex;
@@ -56,9 +54,10 @@ body {
 .explore__image img {
 	border-radius: 12px;
 	width: 100%;
+	height: 100%;
 	aspect-ratio: 605 / 355;
 	object-fit: cover;
-	object-position: top;
+	object-position: 75% 20%;
 	transition: transform 0.5s;
 }
 .explore__body {
@@ -227,6 +226,7 @@ body {
 	grid-template-columns: repeat(auto-fill, minmax(263px, 1fr));
 	column-gap: 39px;
 	row-gap: 25px;
+	grid-auto-rows: 1fr;
 }
 
 .arrival__item {
@@ -329,6 +329,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	gap: 20px;
+	/* grid-auto-rows: 1fr; */
 }
 .content-saving {
 }
@@ -342,13 +343,13 @@ body {
 .content-saving__item:nth-child(5n + 1),
 .content-saving__item:nth-child(5n + 3) {
 	grid-column: span 2;
-	padding: 64px 20px;
+	padding: 16% 5%;
 }
-
+/* Валідатор видає "Помилка розбору" не знаю як виправити */
 .content-saving__item:nth-child(2):has(.content-saving__label),
 .content-saving__item:nth-child(5n + 2):has(.content-saving__label) {
 	grid-column: span 2;
-	padding: 34px 20px 41px 20px;
+	padding: 8.5% 5% 10.25% 5%;
 }
 .content-saving__item:nth-child(2),
 .content-saving__item:nth-child(3),
@@ -362,8 +363,9 @@ body {
 .content-saving__item:nth-child(5n + 4),
 .content-saving__item:nth-child(5n + 5) {
 	grid-column: span 3;
-	padding: 45px 96px 50px 20px;
+	padding: 7.377049% 15.737705% 8.196721% 3.278689%;
 }
+
 .content-saving__image {
 	border-radius: 12px;
 }
@@ -373,8 +375,9 @@ body {
 	left: 0;
 	aspect-ratio: 400 / 393;
 	width: 100%;
+	height: 100%;
 	object-fit: cover;
-	object-position: top;
+	object-position: 40% 5%;
 	border-radius: 12px;
 }
 .content-saving__item:nth-child(4) .content-saving__image img,
@@ -398,13 +401,12 @@ body {
 }
 
 .content-saving__item:nth-child(2) .content-saving__body,
-.content-saving__item:nth-child(5n + 2) .content-saving__body,
-.content-saving__item:nth-child(3) .content-saving__body,
-.content-saving__item:nth-child(5n + 3) .content-saving__body {
+.content-saving__item:nth-child(5n + 2) .content-saving__body {
 	text-align: right;
 	margin-left: auto;
 	max-width: 155px;
 }
+
 .content-saving__item:nth-child(3) .content-saving__body,
 .content-saving__item:nth-child(5n + 3) .content-saving__body {
 	color: #3c4242;
@@ -412,7 +414,9 @@ body {
 .content-saving__item:nth-child(4) .content-saving__body,
 .content-saving__item:nth-child(5n + 4) .content-saving__body,
 .content-saving__item:nth-child(5) .content-saving__body,
-.content-saving__item:nth-child(5n + 5) .content-saving__body {
+.content-saving__item:nth-child(5n + 5) .content-saving__body,
+.content-saving__item:nth-child(3) .content-saving__body,
+.content-saving__item:nth-child(5n + 3) .content-saving__body {
 	text-align: left;
 	margin-left: auto;
 	max-width: 155px;
@@ -441,6 +445,9 @@ body {
 	line-height: 1.37; /* 137.255% */
 	letter-spacing: 0.56px;
 	color: #3c4242;
+}
+.content-saving__link-title {
+	transition: text-decoration 0.3s;
 }
 .content-saving__item:nth-child(1) .content-saving__title,
 .content-saving__item:nth-child(2) .content-saving__title,
@@ -494,9 +501,7 @@ body {
 	stroke: #3c4242;
 }
 .content-saving__item:nth-child(2) .content-saving__arrow svg,
-.content-saving__item:nth-child(5n + 2) .content-saving__arrow svg,
-.content-saving__item:nth-child(3) .content-saving__arrow svg,
-.content-saving__item:nth-child(5n + 3) .content-saving__arrow svg {
+.content-saving__item:nth-child(5n + 2) .content-saving__arrow svg {
 	left: 86px;
 }
 .content-saving__arrow:not(:last-child) {
@@ -506,7 +511,7 @@ body {
 }
 .button {
 	display: inline-flex;
-	padding: 16px 8px;
+	padding: 10px 25px;
 	align-items: center;
 	justify-content: center;
 	border-radius: 4px;
@@ -516,10 +521,94 @@ body {
 	font-size: 12px;
 	font-weight: 600;
 	line-height: 1.16; /* 14/12 */
+	justify-self: start;
+	transition: all 0.3s;
 }
 .content-saving__item:nth-child(1) .button,
 .content-saving__item:nth-child(2) .button,
 .content-saving__item:nth-child(5n + 1) .button,
 .content-saving__item:nth-child(5n + 2) .button {
 	border: 1px solid #fff;
+}
+.content-saving__item:nth-child(2) .button,
+.content-saving__item:nth-child(5n + 2) .button {
+	justify-self: end;
+}
+
+@media (max-width: 991.98px) {
+	.saving__content {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.content-saving__item:nth-child(1),
+	.content-saving__item:nth-child(2),
+	.content-saving__item:nth-child(5n + 2),
+	.content-saving__item:nth-child(3),
+	.content-saving__item:nth-child(5n + 1),
+	.content-saving__item:nth-child(5n + 3),
+	/* Валідатор видає "Помилка розбору" не знаю як виправити */
+	.content-saving__item:nth-child(2):has(.content-saving__label),
+	.content-saving__item:nth-child(5n + 2):has(.content-saving__label) {
+		grid-column: span 2;
+	}
+	.content-saving__item:nth-child(4),
+	.content-saving__item:nth-child(5),
+	.content-saving__item:nth-child(5n + 4),
+	.content-saving__item:nth-child(5n + 5) {
+		grid-column: span 2;
+		padding-right: 3.278689%; /* 20/610 */
+	}
+}
+@media (max-width: 768.98px) {
+	.saving__content {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768.98px) and (min-width: 320px) {
+	.content-saving__item:nth-child(3) .content-saving__arrow svg,
+	.content-saving__item:nth-child(5n + 3) .content-saving__arrow svg,
+	.content-saving__item:nth-child(4) .content-saving__arrow svg,
+	.content-saving__item:nth-child(5n + 4) .content-saving__arrow svg,
+	.content-saving__item:nth-child(5) .content-saving__arrow svg,
+	.content-saving__item:nth-child(5n + 5) .content-saving__arrow svg {
+		left: 82px;
+	}
+	.content-saving__item:nth-child(4) .content-saving__body,
+	.content-saving__item:nth-child(5n + 4) .content-saving__body,
+	.content-saving__item:nth-child(5) .content-saving__body,
+	.content-saving__item:nth-child(5n + 5) .content-saving__body,
+	.content-saving__item:nth-child(3) .content-saving__body,
+	.content-saving__item:nth-child(5n + 3) .content-saving__body {
+		text-align: right;
+	}
+	.content-saving__item:nth-child(3) .button,
+	.content-saving__item:nth-child(5n + 3) .button,
+	.content-saving__item:nth-child(4) .button,
+	.content-saving__item:nth-child(5n + 4) .button,
+	.content-saving__item:nth-child(5) .button,
+	.content-saving__item:nth-child(5n + 5) .button {
+		justify-self: end;
+	}
+}
+@media (any-hover: hover) {
+	.content-saving__link-title:hover {
+		text-decoration: underline;
+	}
+	.button:hover {
+		background-color: #3c4242;
+		color: #fff;
+		border: 1px solid #fff;
+	}
+}
+@media (max-width: 1440px) and (min-width: 320px) {
+	.saving {
+		padding-top: calc((100vw - 320px) / 1120 * 30 + 20px);
+		padding-bottom: calc((100vw - 320px) / 1120 * 30 + 20px);
+	}
+	.saving__title {
+		font-size: calc((100vw - 320px) / 1120 * 6 + 28px);
+	}
+	.saving__title:not(:last-child) {
+		margin-bottom: calc((100vw - 320px) / 1120 * 50 + 20px);
+	}
 }
