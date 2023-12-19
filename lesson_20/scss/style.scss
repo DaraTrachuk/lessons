@@ -117,6 +117,7 @@ body {
 	&__image {
 		display: block;
 		overflow: hidden;
+		border-radius: 5px;
 		&:not(:last-child) {
 			margin-bottom: 25px;
 		}

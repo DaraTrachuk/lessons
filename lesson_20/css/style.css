@@ -184,6 +184,7 @@ body {
 .body-what-we-do__image {
   display: block;
   overflow: hidden;
+  border-radius: 5px;
 }
 .body-what-we-do__image:not(:last-child) {
   margin-bottom: 25px;
