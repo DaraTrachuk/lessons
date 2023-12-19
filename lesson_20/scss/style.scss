@@ -116,6 +116,7 @@ body {
 	// .body-what-we-do__image
 	&__image {
 		display: block;
+		overflow: hidden;
 		&:not(:last-child) {
 			margin-bottom: 25px;
 		}
@@ -127,6 +128,12 @@ body {
 		aspect-ratio: 370 / 552;
 		object-fit: cover;
 		border-radius: 5px;
+		transition: transform 0.5s;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
 	}
 	// .body-what-we-do__text
 	&__text {

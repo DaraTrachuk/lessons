@@ -183,6 +183,7 @@ body {
 }
 .body-what-we-do__image {
   display: block;
+  overflow: hidden;
 }
 .body-what-we-do__image:not(:last-child) {
   margin-bottom: 25px;
@@ -194,6 +195,17 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+@media (any-hover: hover) {
+  .body-what-we-do__img:hover {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }
 .body-what-we-do__text {
   font-size: 20px;
