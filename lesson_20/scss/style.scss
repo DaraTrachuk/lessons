@@ -1,0 +1,136 @@
+@use "sass:math";
+
+// Шрифти
+@import "_fonts.scss";
+// Обнулення
+@import "_reset.scss";
+// Компоненти
+@import "_common.scss";
+// Функції
+// @import "_functions.scss";
+
+body {
+	background-color: #04011f;
+	color: #fff;
+	font-family: "Inter";
+}
+
+.wrapper {
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.wrapper main {
+	flex-grow: 1;
+}
+
+.page {
+}
+//========================================================================================================================================================
+
+.what-we-do {
+	padding-top: clamp(30px, 8.4375vw, 167px);
+	padding-bottom: clamp(30px, 8.4375vw, 167px);
+	@media (min-width: 1460.98px) {
+		&::after {
+			content: "";
+			position: absolute;
+			top: 26.0936%;
+			left: 0;
+			background: url(../img/decor.svg) 0 0 no-repeat;
+			width: 345px;
+			height: 314px;
+		}
+	}
+	// .what-we-do__container
+	&__container {
+		max-width: 1215px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	// .what-we-do__header
+	&__header {
+		max-width: 615px;
+		&:not(:last-child) {
+			margin-bottom: clamp(30px, 7.4261vw, 88px);
+		}
+	}
+	// .what-we-do__label
+	&__label {
+		color: #fac70f;
+		font-size: clamp(18px, 2.3628vw, 28px);
+		line-height: 1.21; /* 34/28 */
+		text-transform: uppercase;
+		&:not(:last-child) {
+			margin-bottom: 13px;
+		}
+	}
+	// .what-we-do__title
+	&__title {
+		font-family: "DM Serif Text";
+		font-size: clamp(30px, 5.4008vw, 64px);
+		line-height: 1.46;
+	}
+	// .what-we-do__body
+	&__body {
+	}
+}
+.body-what-we-do {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: clamp(30px, 5.0632vw, 60px);
+	@media (max-width: 768.98px) {
+		grid-template-columns: repeat(2, 1fr);
+		& .body-what-we-do__item {
+			&:nth-child(2) {
+				transform: translate(0, 0);
+			}
+			&:nth-child(3) {
+				transform: translate(0, 0);
+			}
+		}
+	}
+	@media (max-width: 487.98px) {
+		grid-template-columns: auto;
+	}
+	// .body-what-we-do__item
+	&__item {
+		&:nth-child(2) {
+			transform: translate(0, -40px);
+			.body-what-we-do {
+				&__img {
+					aspect-ratio: 336 / 465;
+				}
+				@media (max-width: 768.98px) {
+					&__img {
+						aspect-ratio: 370 / 552;
+					}
+				}
+			}
+		}
+		&:nth-child(3) {
+			transform: translate(0, 80px);
+		}
+	}
+	// .body-what-we-do__image
+	&__image {
+		display: block;
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+	// .body-what-we-do__img
+	&__img {
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 370 / 552;
+		object-fit: cover;
+		border-radius: 5px;
+	}
+	// .body-what-we-do__text
+	&__text {
+		font-size: 20px;
+		line-height: 1.8; /* 36px */
+	}
+}
