@@ -59,26 +59,25 @@ body {
 	z-index: 50;
 	// .header__container
 	&__container {
-		min-height: toRem(108);
+		@include adaptiveValue("min-height", 108, 50, 0, $containerWidth, 991.98);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		@include adaptiveValue("gap", 76, 20, 0, $containerWidth, 991.98);
+		@include adaptiveValue("column-gap", 76, 15, 0, $containerWidth, 991.98);
 		padding-top: toRem(5);
 		padding-bottom: toRem(5);
-		@media (max-width: 991.98px) {
-			min-height: toRem(70);
-		}
 	}
 	// .header__logo
 	&__logo {
 		position: relative;
 		z-index: 5;
 		max-width: 100%;
+		@media (max-width: 991.98px) {
+		}
 		& img {
 			width: 100%;
 			height: 100%;
-			aspect-ratio: 92 / 45;
+			aspect-ratio: 93 / 45;
 			object-fit: contain;
 		}
 	}
@@ -93,7 +92,9 @@ body {
 	}
 }
 .menu {
-	flex: 1 1 auto;
+	@media (min-width: 991.98px) {
+		flex: 1 1 auto;
+	}
 	// .menu__body
 	&__body {
 		@media (max-width: 991.98px) {
@@ -171,6 +172,18 @@ body {
 	flex: 0 0 21.532258%; /* 267/1240 */
 	position: relative;
 	z-index: 5;
+	@media (max-width: 991.98px) {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: flex-end;
+	}
+	&._active {
+		.search-header__form {
+			opacity: 1;
+			top: 100%;
+			visibility: visible;
+		}
+	}
 	//.search-header__form
 	&__form {
 		background-color: $grayWhiteColor;
@@ -185,6 +198,26 @@ body {
 			position: absolute;
 			left: toRem(14);
 			top: toRem(12);
+		}
+		@media (max-width: 991.98px) {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: -100%;
+			z-index: 6;
+			opacity: 0;
+			visibility: hidden;
+			// transition: all 0.3s;
+		}
+	}
+	//.search-header__button
+	&__button {
+		position: relative;
+		z-index: 5;
+		width: toRem(20);
+		height: toRem(20);
+		@media (min-width: 991.98px) {
+			display: none;
 		}
 	}
 	// .search-header__input
@@ -212,7 +245,7 @@ body {
 	&__item {
 		border-radius: toRem(8);
 		background-color: $grayWhiteColor;
-		padding: toRem(12);
+		@include adaptiveValue("padding", 12, 5);
 		transition: background-color 0.3s;
 		@media (any-hover: hover) {
 			&:hover {
@@ -220,8 +253,8 @@ body {
 			}
 		}
 		& img {
-			width: toRem(20);
-			height: toRem(20);
+			@include adaptiveValue("width", 20, 15);
+			@include adaptiveValue("height", 20, 15);
 		}
 	}
 }
