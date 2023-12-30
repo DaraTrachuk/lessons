@@ -173,16 +173,9 @@ body {
 	position: relative;
 	z-index: 5;
 	@media (max-width: 991.98px) {
-		flex: 1 1 auto;
 		display: flex;
 		justify-content: flex-end;
-	}
-	&._active {
-		.search-header__form {
-			opacity: 1;
-			top: 100%;
-			visibility: visible;
-		}
+		flex: 1 1 auto;
 	}
 	//.search-header__form
 	&__form {
@@ -208,6 +201,11 @@ body {
 			opacity: 0;
 			visibility: hidden;
 			// transition: all 0.3s;
+			&._active {
+				opacity: 1;
+				top: 150%;
+				visibility: visible;
+			}
 		}
 	}
 	//.search-header__button
@@ -264,7 +262,7 @@ body {
 		width: toRem(30);
 		display: block;
 		flex: 0 0 toRem(30);
-		height: toRem(30);
+		height: toRem(20);
 		position: relative;
 		z-index: 5;
 		&::before,
@@ -290,17 +288,18 @@ body {
 		}
 		.menu-open & {
 			span {
-				transform: scale(0);
+				width: 0;
+			}
+			&::before,
+			&::after {
 			}
 			&::before {
+				top: calc(50% - toRem(1));
 				transform: rotate(-45deg);
-				top: 50%;
-				margin-top: toRem(-1);
 			}
 			&::after {
+				bottom: calc(50% - toRem(1));
 				transform: rotate(45deg);
-				bottom: 50%;
-				margin-bottom: toRem(-1);
 			}
 		}
 	}
