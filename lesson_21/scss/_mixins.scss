@@ -1,0 +1,25 @@
+// calculate clamp for adaptive size
+// Адаптивна властивість: CSS-властивість, початкове значення, кінцеве значення, ширина початкова, ширина кінцева (використовується clamp())
+// За замовчуванням ширина viewport-а: (максимальна 1400), (мінімальна 320)
+@function calculate-clamp($maxSize, $minSize, $maxWidth: 1400, $minWidth: 320) {
+	// convert to rem
+	// Конвертація значень в rem
+	$minSize: math.div($minSize, 16);
+	$maxSize: math.div($maxSize, 16);
+	$maxWidth: math.div($maxWidth, 16);
+	$minWidth: math.div($minWidth, 16);
+
+	// do calculations
+	// Розрахунки для адаптивного розміру
+	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+	$yAxisIntersection: -$minWidth * $slope + $minSize;
+	$preferredValue: (#{$yAxisIntersection * 1rem}) "+ " + (#{$slope * 100vw});
+
+	// output as rem
+	// Вивід результатів у вигляді rem
+	$minSize: $minSize * 1rem;
+	$maxSize: $maxSize * 1rem;
+
+	// Використання clamp для адаптивного обмеження
+	@return clamp(#{$minSize}, #{$preferredValue}, #{$maxSize});
+}
