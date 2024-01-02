@@ -2119,18 +2119,18 @@ body {
 }
 @media (min-width: 79.375em) {
   .brands__wrapper {
-    padding-left: 7.625rem;
+    padding-left: 7.75rem;
   }
 }
 @media (min-width: 20em) and (max-width: 79.375em) {
-  @supports (padding-left: clamp( 1.875rem , -0.0618421053rem  +  9.6842105263vw , 7.625rem )) {
+  @supports (padding-left: clamp( 1.875rem , -0.1039473684rem  +  9.8947368421vw , 7.75rem )) {
     .brands__wrapper {
-      padding-left: clamp( 1.875rem , -0.0618421053rem  +  9.6842105263vw , 7.625rem );
+      padding-left: clamp( 1.875rem , -0.1039473684rem  +  9.8947368421vw , 7.75rem );
     }
   }
-  @supports not (padding-left: clamp( 1.875rem , -0.0618421053rem  +  9.6842105263vw , 7.625rem )) {
+  @supports not (padding-left: clamp( 1.875rem , -0.1039473684rem  +  9.8947368421vw , 7.75rem )) {
     .brands__wrapper {
-      padding-left: calc(1.875rem + 5.75 * (100vw - 20rem) / 59.375);
+      padding-left: calc(1.875rem + 5.875 * (100vw - 20rem) / 59.375);
     }
   }
 }
@@ -2141,18 +2141,18 @@ body {
 }
 @media (min-width: 79.375em) {
   .brands__wrapper {
-    padding-right: 7.625rem;
+    padding-right: 7.75rem;
   }
 }
 @media (min-width: 20em) and (max-width: 79.375em) {
-  @supports (padding-right: clamp( 1.875rem , -0.0618421053rem  +  9.6842105263vw , 7.625rem )) {
+  @supports (padding-right: clamp( 1.875rem , -0.1039473684rem  +  9.8947368421vw , 7.75rem )) {
     .brands__wrapper {
-      padding-right: clamp( 1.875rem , -0.0618421053rem  +  9.6842105263vw , 7.625rem );
+      padding-right: clamp( 1.875rem , -0.1039473684rem  +  9.8947368421vw , 7.75rem );
     }
   }
-  @supports not (padding-right: clamp( 1.875rem , -0.0618421053rem  +  9.6842105263vw , 7.625rem )) {
+  @supports not (padding-right: clamp( 1.875rem , -0.1039473684rem  +  9.8947368421vw , 7.75rem )) {
     .brands__wrapper {
-      padding-right: calc(1.875rem + 5.75 * (100vw - 20rem) / 59.375);
+      padding-right: calc(1.875rem + 5.875 * (100vw - 20rem) / 59.375);
     }
   }
 }
@@ -2243,17 +2243,23 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0.625rem;
   min-width: 100%;
 }
 .list-brands__link {
   display: block;
+  padding: 0.625rem;
+  position: relative;
+  width: 100%;
+}
+@media (any-hover: hover) {
+  .list-brands__link:hover img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 .list-brands__link img {
-  aspect-ratio: 155/55;
+  aspect-ratio: 177/55;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -2262,11 +2268,4 @@ body {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
-}
-@media (any-hover: hover) {
-  .list-brands__link img:hover {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
-  }
 }
