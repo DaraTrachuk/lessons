@@ -1336,7 +1336,7 @@ body {
   }
 }
 @media (min-width: 991.98px) and (any-hover: hover) {
-  .hero__arrow-right:hover img, .hero__arrow-left:hover img {
+  .hero__arrow-right__arrow-right:hover .hero__arrow-right img, .hero__arrow-right__arrow-right:hover .hero__arrow-left img, .hero__arrow-left__arrow-right:hover .hero__arrow-right img, .hero__arrow-left__arrow-right:hover .hero__arrow-left img {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
