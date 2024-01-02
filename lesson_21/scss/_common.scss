@@ -123,18 +123,20 @@ $whiteColor: #fff;
 	&__arrow-right {
 		position: absolute;
 		bottom: 50%;
-		transition: background-color 0.3s;
+		transition: all 0.3s;
 		border-radius: 50%;
 		width: 26px;
 		height: 26px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		z-index: 3;
 		@media (max-width: 651px) {
 			display: none;
 		}
 		@media (any-hover: hover) {
 			&:hover {
+				transform: scale(1.2);
 				background-color: #c9cdcd;
 			}
 		}
