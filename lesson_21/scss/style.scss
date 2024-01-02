@@ -420,16 +420,17 @@ body {
 		&__arrow-left {
 			position: absolute;
 			top: 50%;
-			transform: rotate(0, -50%);
-			& img {
-				width: toRem(24);
-				height: toRem(45);
-				transition: transform 0.3s;
-				@media (any-hover: hover) {
-					&:hover {
-						transform: scale(1.1);
+			transform: translate(0, -50%);
+			@media (any-hover: hover) {
+				&:hover {
+					img {
+						transform: scale(1.2);
 					}
 				}
+			}
+			img {
+				width: toRem(24);
+				height: toRem(45);
 			}
 		}
 		// .hero__arrow-right
@@ -703,7 +704,7 @@ body {
 	}
 	&__wrapper {
 		border-radius: toRem(12);
-		border: 1.069px solid var(#3c4242, #323232);
+		border: 1.069px solid #323232;
 		background-color: $mainColor;
 		@include adaptiveValue("padding-top", 44, 30);
 		@include adaptiveValue("padding-bottom", 60, 30);
