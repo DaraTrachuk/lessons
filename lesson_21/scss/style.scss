@@ -708,8 +708,8 @@ body {
 		background-color: $mainColor;
 		@include adaptiveValue("padding-top", 44, 30);
 		@include adaptiveValue("padding-bottom", 60, 30);
-		@include adaptiveValue("padding-left", 124, 30);
-		@include adaptiveValue("padding-right", 124, 30);
+		padding-left: toRem(30);
+		padding-right: toRem(30);
 	}
 	// .brands__title
 	&__title {
@@ -745,38 +745,35 @@ body {
 	}
 }
 .list-brands {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(toRem(177), 1fr));
-	gap: toRem(25);
-	align-content: center;
-	justify-items: center;
-	grid-auto-rows: 1fr;
-
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	@include adaptiveValue("gap", 25, 15);
 	// .list-brands__item
 	&__item {
-		border-radius: toRem(12);
-		background-color: #fff;
-		display: flex;
-		align-items: center;
-		min-width: 100%;
 	}
 	// .list-brands__link
 	&__link {
-		display: block;
+		border-radius: toRem(12);
+		background-color: #fff;
 		padding: toRem(10);
-		position: relative;
-		width: 100%;
-		@media (any-hover: hover) {
-			&:hover img {
-				transform: scale(1.1);
-			}
-		}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: toRem(85);
+		min-width: 14.274194%; /* 177/1240 */
 		img {
-			aspect-ratio: 177 / 55;
 			width: 100%;
 			height: 100%;
+			aspect-ratio: 149 / 53;
 			object-fit: contain;
 			transition: transform 0.3s;
+			@media (any-hover: hover) {
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
 		}
 	}
 }
