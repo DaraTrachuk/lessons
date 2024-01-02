@@ -2250,7 +2250,7 @@ body {
   min-width: 100%;
 }
 .list-brands__link {
-  display: inline-block;
+  display: block;
 }
 .list-brands__link img {
   aspect-ratio: 155/55;
@@ -2258,4 +2258,15 @@ body {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+@media (any-hover: hover) {
+  .list-brands__link img:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
