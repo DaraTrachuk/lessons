@@ -930,7 +930,7 @@ body {
 
 .hero {
   margin-top: clamp(66px, 11vw, 108px);
-  min-height: calc(100vh - clamp(66px, 11vw, 108px));
+  min-height: calc(100dvh - clamp(66px, 11vw, 108px));
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

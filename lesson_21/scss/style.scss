@@ -314,15 +314,15 @@ body {
 //========================================================================================================================================================
 .hero {
 	margin-top: clamp(66px, 11vw, 108px);
-	min-height: calc(100vh - clamp(66px, 11vw, 108px));
+	min-height: calc(100dvh - clamp(66px, 11vw, 108px));
 	position: relative;
 	display: flex;
 	align-items: center;
 
 	// .hero__container
 	&__container {
-		// @include adaptiveValue("padding-top", 130, 100);
-		// @include adaptiveValue("padding-bottom", 130, 100);
+		// @include adaptiveValue("padding-top", 130, 30);
+		// @include adaptiveValue("padding-bottom", 130, 30);
 		position: relative;
 		flex: 1 1 auto;
 		z-index: 3;
