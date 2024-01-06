@@ -313,16 +313,16 @@ body {
 }
 //========================================================================================================================================================
 .hero {
-	margin-top: clamp(66px, 9.5vw, 108px);
-	min-height: calc(100vh - clamp(66px, 9.5vw, 108px));
+	margin-top: clamp(66px, 11vw, 108px);
+	min-height: calc(100vh - clamp(66px, 11vw, 108px));
 	position: relative;
 	display: flex;
 	align-items: center;
 
 	// .hero__container
 	&__container {
-		@include adaptiveValue("padding-top", 130, 100);
-		@include adaptiveValue("padding-bottom", 130, 100);
+		// @include adaptiveValue("padding-top", 130, 100);
+		// @include adaptiveValue("padding-bottom", 130, 100);
 		position: relative;
 		flex: 1 1 auto;
 		z-index: 3;
@@ -334,7 +334,6 @@ body {
 		}
 		color: $whiteColor;
 		font-family: "Core Sans C";
-		// justify-content: center;
 		max-width: 42.741935%;
 		& > *:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 40, 20);
