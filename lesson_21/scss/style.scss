@@ -329,7 +329,9 @@ body {
 	}
 	// .hero__body
 	&__body {
-		@include adaptiveValue("padding-left", 90, 0);
+		@media (min-width: 991.98px) {
+			padding-left: toRem(90); /* 90/1240 */
+		}
 		color: $whiteColor;
 		font-family: "Core Sans C";
 		// justify-content: center;

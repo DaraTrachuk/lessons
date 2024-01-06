@@ -995,26 +995,9 @@ body {
   font-family: "Core Sans C";
   max-width: 42.741935%;
 }
-@media (min-width: 79.375em) {
+@media (min-width: 991.98px) {
   .hero__body {
-    padding-left: 5.625rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 79.375em) {
-  @supports (padding-left: clamp( 0.0000000625rem , -1.8947367586rem  +  9.4736841053vw , 5.625rem )) {
-    .hero__body {
-      padding-left: clamp( 0.0000000625rem , -1.8947367586rem  +  9.4736841053vw , 5.625rem );
-    }
-  }
-  @supports not (padding-left: clamp( 0.0000000625rem , -1.8947367586rem  +  9.4736841053vw , 5.625rem )) {
-    .hero__body {
-      padding-left: calc(0.0000000625rem + 5.6249999375 * (100vw - 20rem) / 59.375);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .hero__body {
-    padding-left: 0.0000000625rem;
+    padding-left: 5.625rem; /* 90/1240 */
   }
 }
 @media (min-width: 79.375em) {
