@@ -318,6 +318,7 @@ body {
 	position: relative;
 	display: flex;
 	align-items: center;
+	transition: all 0.3s;
 
 	// .hero__container
 	&__container {
@@ -359,7 +360,7 @@ body {
 	}
 	// .hero__title
 	&__title {
-		@include adaptiveValue("font-size", 78, 40);
+		@include adaptiveValue("font-size", 78, 40, 0, $containerWidth, 991.98);
 		font-weight: 800;
 		line-height: 1.2;
 		letter-spacing: 0.315px;

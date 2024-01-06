@@ -938,6 +938,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .hero__container {
   position: relative;
@@ -1032,19 +1034,19 @@ body {
     font-size: 4.875rem;
   }
 }
-@media (min-width: 20em) and (max-width: 79.375em) {
-  @supports (font-size: clamp( 2.5rem , 1.7rem  +  4vw , 4.875rem )) {
+@media (min-width: 61.99875em) and (max-width: 79.375em) {
+  @supports (font-size: clamp( 2.5rem , -5.9740396374rem  +  13.668081433vw , 4.875rem )) {
     .hero__title {
-      font-size: clamp( 2.5rem , 1.7rem  +  4vw , 4.875rem );
+      font-size: clamp( 2.5rem , -5.9740396374rem  +  13.668081433vw , 4.875rem );
     }
   }
-  @supports not (font-size: clamp( 2.5rem , 1.7rem  +  4vw , 4.875rem )) {
+  @supports not (font-size: clamp( 2.5rem , -5.9740396374rem  +  13.668081433vw , 4.875rem )) {
     .hero__title {
-      font-size: calc(2.5rem + 2.375 * (100vw - 20rem) / 59.375);
+      font-size: calc(2.5rem + 2.375 * (100vw - 61.99875rem) / 17.37625);
     }
   }
 }
-@media (max-width: 20em) {
+@media (max-width: 61.99875em) {
   .hero__title {
     font-size: 2.5rem;
   }
