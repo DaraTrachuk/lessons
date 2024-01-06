@@ -84,6 +84,7 @@ $whiteColor: #fff;
 		max-width: 100%;
 		overflow: hidden;
 		border-radius: toRem(12);
+		align-self: start;
 		& img {
 			aspect-ratio: 263 / 263;
 			width: 100%;
