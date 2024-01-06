@@ -322,8 +322,8 @@ body {
 
 	// .hero__container
 	&__container {
-		// @include adaptiveValue("padding-top", 130, 30);
-		// @include adaptiveValue("padding-bottom", 130, 30);
+		@include adaptiveValue("padding-top", 130, 30);
+		@include adaptiveValue("padding-bottom", 130, 30);
 		position: relative;
 		flex: 1 1 auto;
 		z-index: 3;

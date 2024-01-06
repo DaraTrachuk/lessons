@@ -948,6 +948,50 @@ body {
           flex: 1 1 auto;
   z-index: 3;
 }
+@media (min-width: 79.375em) {
+  .hero__container {
+    padding-top: 8.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (padding-top: clamp( 1.875rem , -0.2302631579rem  +  10.5263157895vw , 8.125rem )) {
+    .hero__container {
+      padding-top: clamp( 1.875rem , -0.2302631579rem  +  10.5263157895vw , 8.125rem );
+    }
+  }
+  @supports not (padding-top: clamp( 1.875rem , -0.2302631579rem  +  10.5263157895vw , 8.125rem )) {
+    .hero__container {
+      padding-top: calc(1.875rem + 6.25 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .hero__container {
+    padding-top: 1.875rem;
+  }
+}
+@media (min-width: 79.375em) {
+  .hero__container {
+    padding-bottom: 8.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (padding-bottom: clamp( 1.875rem , -0.2302631579rem  +  10.5263157895vw , 8.125rem )) {
+    .hero__container {
+      padding-bottom: clamp( 1.875rem , -0.2302631579rem  +  10.5263157895vw , 8.125rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 1.875rem , -0.2302631579rem  +  10.5263157895vw , 8.125rem )) {
+    .hero__container {
+      padding-bottom: calc(1.875rem + 6.25 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .hero__container {
+    padding-bottom: 1.875rem;
+  }
+}
 .hero__body {
   color: #fff;
   font-family: "Core Sans C";
