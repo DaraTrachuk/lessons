@@ -313,13 +313,11 @@ body {
 }
 //========================================================================================================================================================
 .hero {
-	margin-top: clamp(66px, 11vw, 108px);
-	min-height: calc(100dvh - clamp(66px, 11vw, 108px));
+	margin-top: clamp(toRem(66), 11vw, toRem(108));
+	min-height: calc(100svh - clamp(toRem(66), 11vw, toRem(108)));
 	position: relative;
 	display: flex;
 	align-items: center;
-	transition: all 0.3s;
-
 	// .hero__container
 	&__container {
 		@include adaptiveValue("padding-top", 130, 30);

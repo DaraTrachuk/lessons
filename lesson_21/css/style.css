@@ -929,8 +929,8 @@ body {
 }
 
 .hero {
-  margin-top: clamp(66px, 11vw, 108px);
-  min-height: calc(100dvh - clamp(66px, 11vw, 108px));
+  margin-top: clamp(4.125rem, 11vw, 6.75rem);
+  min-height: calc(100svh - clamp(4.125rem, 11vw, 6.75rem));
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -938,8 +938,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 .hero__container {
   position: relative;
