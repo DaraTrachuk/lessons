@@ -34,6 +34,9 @@ body {
 	font-family: "Causten";
 	font-size: toRem(18);
 	color: $mainColor;
+	.menu-open & {
+		overflow: hidden;
+	}
 }
 .wrapper {
 	overflow: clip;
@@ -127,6 +130,9 @@ body {
 			.menu-open &::before {
 				left: 0;
 			}
+			// .menu-open & {
+			// 	overflow: hidden;
+			// }
 		}
 	}
 	// .menu__list
@@ -313,8 +319,10 @@ body {
 }
 //========================================================================================================================================================
 .hero {
-	margin-top: clamp(toRem(66), 11vw, toRem(108));
-	min-height: calc(100svh - clamp(toRem(66), 11vw, toRem(108)));
+	$marginTop: clamp(toRem(50), 9svw, toRem(108));
+	margin-top: $marginTop;
+	// margin-top: clamp(toRem(66), 11vw, toRem(108));
+	min-height: calc(100svh - $marginTop);
 	position: relative;
 	display: flex;
 	align-items: center;

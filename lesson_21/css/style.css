@@ -459,6 +459,9 @@ body {
   font-size: 1.125rem;
   color: #3c4242;
 }
+.menu-open body {
+  overflow: hidden;
+}
 
 .wrapper {
   overflow: clip;
@@ -929,8 +932,8 @@ body {
 }
 
 .hero {
-  margin-top: clamp(4.125rem, 11vw, 6.75rem);
-  min-height: calc(100svh - clamp(4.125rem, 11vw, 6.75rem));
+  margin-top: clamp(3.125rem, 9svw, 6.75rem);
+  min-height: calc(100svh - clamp(3.125rem, 9svw, 6.75rem));
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
