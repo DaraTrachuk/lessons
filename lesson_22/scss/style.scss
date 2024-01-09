@@ -374,32 +374,30 @@ body {
 }
 //========================================================================================================================================================
 .hero {
-	margin-top: toRem(190);
 	position: relative;
+	$marginTop: clamp(toRem(60), 17.8958vw, toRem(190));
+	margin-top: $marginTop;
 	display: flex;
 	align-items: center;
-	min-height: calc(100svh - toRem(190));
-	&::after {
-		content: "";
-		width: 42.447917%; /* 815/1920 */
-		height: 100%;
-		background-color: rgba(55, 57, 63, 0.91);
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
+
 	// .hero__container
 	&__wrapper {
-		@include adaptiveValue("padding-top", 205, 30);
-		@include adaptiveValue("padding-bottom", 205, 30);
-		@include adaptiveValue("padding-right", 117, 15);
+		@include adaptiveValue("padding-top", 205, 50);
+		@include adaptiveValue("padding-bottom", 205, 50);
 		@include adaptiveValue("padding-left", 117, 15);
-		flex-basis: 42.447917%;
+		@include adaptiveValue("padding-right", 200, 15);
+		min-height: calc(100svh - $marginTop);
+		flex: 0 1 auto;
+		background-color: rgba(55, 57, 63, 0.91);
 		position: relative;
-		z-index: 3;
+		z-index: 2;
+		display: flex;
+		align-items: center;
 	}
 	&__body {
-		// max-width: 30.989583%; /* 595/1920 */
+		position: relative;
+		z-index: 3;
+		max-width: toRem(510);
 	}
 	// .hero__label
 	&__label {
@@ -413,7 +411,7 @@ body {
 	// .hero__title
 	&__title {
 		color: $whiteColor;
-		@include adaptiveValue("font-size", 60, 30);
+		@include adaptiveValue("font-size", 60, 40);
 		line-height: 1.1; /* 66px */
 		span {
 			color: $greenColor;
@@ -425,6 +423,7 @@ body {
 	// .hero__image-bg
 	&__image-bg {
 		max-width: 100%;
+		padding-bottom: 42.447917%; /* 815/1920 */
 		img {
 			position: absolute;
 			top: 0;
@@ -437,6 +436,9 @@ body {
 	}
 	// .hero__text
 	&__text {
+		color: $darkGreyColor;
+		font-weight: 500;
+		line-height: 1.46; /* 26.314px */
 	}
 	// .hero__wrapper-button
 	&__wrapper-button {
