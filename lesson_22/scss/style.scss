@@ -55,10 +55,10 @@ body {
 //========================================================================================================================================================
 .button {
 	display: inline-flex;
-	@include adaptiveValue("padding-top", 22, 10);
-	@include adaptiveValue("padding-bottom", 22, 10);
-	@include adaptiveValue("padding-left", 35, 15);
-	@include adaptiveValue("padding-right", 35, 15);
+	@include adaptiveValue("padding-top", 22, 8);
+	@include adaptiveValue("padding-bottom", 22, 8);
+	@include adaptiveValue("padding-left", 35, 10);
+	@include adaptiveValue("padding-right", 35, 10);
 	@include adaptiveValue("font-size", 18, 16);
 	justify-content: center;
 	align-items: center;
@@ -70,12 +70,44 @@ body {
 	line-height: 1.22; /* 22/18 */
 	text-transform: capitalize;
 	transition: background-color 0.3s;
+	&--green {
+	}
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: $greenColor;
 		}
 	}
 }
+
+.label {
+	color: $darkGreyColor;
+	font-weight: 500;
+	line-height: 1.22; /* 22/18 */
+	display: flex;
+	align-items: center;
+	gap: toRem(6);
+	&::before {
+		content: "";
+		width: toRem(12);
+		height: toRem(12);
+		background-color: $greenColor;
+	}
+}
+.title {
+	color: $darkGreyColor;
+	font-family: "Poppins";
+	font-weight: 700;
+}
+.text {
+	color: $lightGrayColor;
+	line-height: 1.46;
+	&:not(:last-child) {
+		p {
+			margin-bottom: toRem(15);
+		}
+	}
+}
+
 //========================================================================================================================================================
 .header {
 	position: fixed;
@@ -111,8 +143,9 @@ body {
 	row-gap: toRem(15);
 	align-items: center;
 	justify-content: space-between;
-	@media (max-width: toEm(991.98)) {
+	@media (max-width: toEm(570.98)) {
 		flex-wrap: wrap;
+		flex-direction: column;
 	}
 	// .actions-header__item
 	&__item {
@@ -124,6 +157,10 @@ body {
 		color: $whiteColor;
 		font-size: toRem(14);
 		line-height: 1.21; /* 17/14 */
+		@media (max-width: toEm(570.98)) {
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
 	}
 	&__adress,
 	&__mail,
@@ -187,11 +224,16 @@ body {
 		position: relative;
 		z-index: 2;
 		max-width: 100%;
-		img {
-			aspect-ratio: 200 / 65;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
+		@media (max-width: toEm(445.98)) {
+			display: none;
+		}
+	}
+	&__mobile-logo {
+		display: none;
+		@media (max-width: toEm(445.98)) {
+			position: relative;
+			z-index: 2;
+			display: block;
 		}
 	}
 	// .main-header__menu
@@ -251,6 +293,9 @@ body {
 			flex-direction: column;
 			text-align: center;
 			row-gap: toRem(20);
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
 		}
 	}
 	// .menu__item
@@ -282,9 +327,9 @@ body {
 .icon-menu {
 	display: none;
 	@media (max-width: toEm(991.98)) {
-		width: toRem(30);
+		width: toRem(25);
 		display: block;
-		flex: 0 0 toRem(30);
+		flex: 0 0 toRem(25);
 		height: toRem(20);
 		position: relative;
 		z-index: 5;
@@ -325,5 +370,81 @@ body {
 				transform: rotate(45deg);
 			}
 		}
+	}
+}
+//========================================================================================================================================================
+.hero {
+	margin-top: toRem(190);
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: calc(100svh - toRem(190));
+	&::after {
+		content: "";
+		width: 42.447917%; /* 815/1920 */
+		height: 100%;
+		background-color: rgba(55, 57, 63, 0.91);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	// .hero__container
+	&__wrapper {
+		@include adaptiveValue("padding-top", 205, 30);
+		@include adaptiveValue("padding-bottom", 205, 30);
+		@include adaptiveValue("padding-right", 117, 15);
+		@include adaptiveValue("padding-left", 117, 15);
+		flex-basis: 42.447917%;
+		position: relative;
+		z-index: 3;
+	}
+	&__body {
+		// max-width: 30.989583%; /* 595/1920 */
+	}
+	// .hero__label
+	&__label {
+		color: $whiteColor;
+		font-weight: 600;
+		line-height: 1.46; /* 26.314px */
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .hero__title
+	&__title {
+		color: $whiteColor;
+		@include adaptiveValue("font-size", 60, 30);
+		line-height: 1.1; /* 66px */
+		span {
+			color: $greenColor;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	// .hero__image-bg
+	&__image-bg {
+		max-width: 100%;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: right;
+		}
+	}
+	// .hero__text
+	&__text {
+	}
+	// .hero__wrapper-button
+	&__wrapper-button {
+	}
+	// .hero__button
+	&__button {
+	}
+	// .hero__link
+	&__link {
 	}
 }
