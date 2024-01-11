@@ -27,6 +27,7 @@ $darkGreyColor: #37393f;
 $lightGrayColor: #7d7d7d;
 $whiteGrayColor: #f4f4f4;
 $whiteColor: #fff;
+$heroText: #b9b9b9;
 //========================================================================================================================================================
 body {
 	font-family: "Inter";
@@ -70,11 +71,20 @@ body {
 	line-height: 1.22; /* 22/18 */
 	text-transform: capitalize;
 	transition: background-color 0.3s;
-	&--green {
-	}
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: $greenColor;
+		}
+	}
+	&--green {
+		background-color: $greenColor;
+		color: $darkGreyColor;
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $blueColor;
+				color: $whiteColor;
+			}
 		}
 	}
 }
@@ -101,6 +111,7 @@ body {
 .text {
 	color: $lightGrayColor;
 	line-height: 1.46;
+	font-size: toRem(18);
 	&:not(:last-child) {
 		p {
 			margin-bottom: toRem(15);
@@ -264,6 +275,11 @@ body {
 			transition: left 0.3s;
 			padding: toRem(100) toRem(15) toRem(30) toRem(15);
 			background-color: $whiteColor;
+
+			display: flex;
+			flex-direction: column;
+			gap: toRem(30);
+
 			&::before {
 				content: "";
 				position: fixed;
@@ -293,9 +309,8 @@ body {
 			flex-direction: column;
 			text-align: center;
 			row-gap: toRem(20);
-			&:not(:last-child) {
-				margin-bottom: toRem(30);
-			}
+			flex-grow: 1;
+			justify-content: flex-start;
 		}
 	}
 	// .menu__item
@@ -319,10 +334,6 @@ body {
 			}
 		}
 	}
-}
-._icon-arrow-menu {
-}
-.button {
 }
 .icon-menu {
 	display: none;
@@ -375,17 +386,11 @@ body {
 //========================================================================================================================================================
 .hero {
 	position: relative;
-	$marginTop: clamp(toRem(60), 17.8958vw, toRem(190));
+	$marginTop: clamp(toRem(60), 16vw, toRem(190));
 	margin-top: $marginTop;
 	display: flex;
-	align-items: center;
-
 	// .hero__container
 	&__wrapper {
-		@include adaptiveValue("padding-top", 205, 50);
-		@include adaptiveValue("padding-bottom", 205, 50);
-		@include adaptiveValue("padding-left", 117, 15);
-		@include adaptiveValue("padding-right", 200, 15);
 		min-height: calc(100svh - $marginTop);
 		flex: 0 1 auto;
 		background-color: rgba(55, 57, 63, 0.91);
@@ -393,14 +398,29 @@ body {
 		z-index: 2;
 		display: flex;
 		align-items: center;
+		transition: all 0.3s;
+		@include adaptiveValue("padding-top", 205, 50);
+		@include adaptiveValue("padding-bottom", 204, 50);
+		padding-left: toRem(117);
+		padding-right: toRem(200);
+		@media (max-width: toEm(1370)) {
+			flex: 1 1 auto;
+			padding-left: toRem(15);
+			padding-right: toRem(15);
+		}
 	}
 	&__body {
 		position: relative;
 		z-index: 3;
 		max-width: toRem(510);
+		transition: all 0.3s;
+		@media (max-width: toEm(1370)) {
+			max-width: 100%;
+		}
 	}
 	// .hero__label
 	&__label {
+		@include adaptiveValue("font-size", 18, 16);
 		color: $whiteColor;
 		font-weight: 600;
 		line-height: 1.46; /* 26.314px */
@@ -436,17 +456,265 @@ body {
 	}
 	// .hero__text
 	&__text {
-		color: $darkGreyColor;
+		color: $heroText;
 		font-weight: 500;
-		line-height: 1.46; /* 26.314px */
+		line-height: 1.46;
+		&:not(:last-child) {
+			margin-bottom: toRem(35);
+		}
 	}
 	// .hero__wrapper-button
 	&__wrapper-button {
+		display: flex;
+		align-items: center;
+		gap: toRem(50);
+		@media (max-width: toEm(425)) {
+			flex-direction: column;
+			align-items: stretch;
+		}
 	}
 	// .hero__button
 	&__button {
+		padding-left: toRem(27);
+		padding-right: toRem(27);
 	}
 	// .hero__link
 	&__link {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		color: $whiteColor;
+		line-height: 1.22; /* 22/18 */
+		font-weight: 600;
+		text-transform: capitalize;
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					background-color: $greenColor;
+				}
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
+		&::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $whiteColor;
+			width: toRem(60);
+			font-size: toRem(20);
+			height: toRem(60);
+			flex: 0 0 toRem(60);
+			background-color: $blueColor;
+			border-radius: 50%;
+			transition: all 0.3s;
+		}
 	}
+}
+//========================================================================================================================================================
+.welcome {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $whiteGrayColor;
+		width: toRem(827); /* 830/1920 */
+		height: 100%;
+		@media (max-width: toEm(1370)) {
+			width: 100%;
+		}
+	}
+	// .welcome__container
+	&__container {
+		@include adaptiveValue("padding-top", 150, 40);
+		@include adaptiveValue("padding-bottom", 150, 40);
+		position: relative;
+		z-index: 2;
+	}
+	// .welcome__content
+	&__content {
+		display: flex;
+		gap: toRem(120);
+		@include adaptiveValue("gap", 120, 30, 0, $containerWidth, 991.98);
+		flex-wrap: wrap-reverse;
+		justify-content: space-between;
+	}
+	// .welcome__left-side
+	&__left-side {
+	}
+	// .welcome__right-side
+	&__right-side {
+	}
+}
+.left-side-welcome {
+	flex: 1 1 35%;
+	@media (max-width: toEm(991.98)) {
+		flex: 1 1 auto;
+	}
+	// .left-side-welcome__image
+	&__image {
+		max-width: 100%;
+		&:not(:last-child) {
+			margin-bottom: toRem(19);
+		}
+		img {
+			aspect-ratio: 408 / 446;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	// .left-side-welcome__body
+	&__body {
+	}
+	// .left-side-welcome__title
+	&__title {
+		@include adaptiveValue("font-size", 30, 20);
+		font-weight: 600;
+		line-height: 1.21;
+		&:not(:last-child) {
+			margin-bottom: toRem(13);
+		}
+	}
+	// .left-side-welcome__text
+	&__text {
+		line-height: 1.46;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	// .left-side-welcome__link
+	&__link {
+		display: inline-block;
+		color: $darkGreyColor;
+		font-weight: 600;
+		line-height: 1.22; /* 22/18 */
+		text-transform: capitalize;
+		transition: text-decoration 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.title {
+}
+.right-side-welcome {
+	flex: 1 1 55%;
+	@media (max-width: toEm(991.98)) {
+		flex: 1 1 auto;
+	}
+	// .right-side-welcome__body
+	&__body {
+	}
+	// .right-side-welcome__label
+	&__label {
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+	// .right-side-welcome__title
+	&__title {
+		@include adaptiveValue("font-size", 40, 30);
+		font-weight: 700;
+		line-height: 1.21;
+		max-width: toRem(415);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	// .right-side-welcome__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	// .right-side-welcome__services
+	&__services {
+	}
+	// .right-side-welcome__achievements
+	&__achievements {
+	}
+	// .right-side-welcome__button
+	&__button {
+		@media (max-width: toEm(650.98)) {
+			min-width: 100%;
+		}
+	}
+}
+.label {
+}
+.text {
+}
+.services-welcome {
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 40, 30);
+	}
+	// .services-welcome__item
+	&__item {
+		display: flex;
+		gap: toRem(8);
+		line-height: 1.35; /* 27/20 */
+		&::before {
+			font-size: toRem(27);
+			color: $blueColor;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(23);
+		}
+	}
+}
+.achievements-welcome {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: toRem(21);
+	&:not(:last-child) {
+		margin-bottom: toRem(40);
+	}
+	// .achievements-welcome__item
+	&__item {
+		flex: 0 1 toRem(300);
+		@include adaptiveValue("padding-top", 30, 15);
+		@include adaptiveValue("padding-bottom", 30, 15);
+		@include adaptiveValue("padding-left", 37, 15);
+		@include adaptiveValue("padding-right", 37, 15);
+		// padding: toRem(31) toRem(37);
+		border: 1px solid #e3e3e3;
+		display: flex;
+		align-items: flex-start;
+		gap: toRem(19);
+		@media (max-width: toEm(1130)) {
+			flex: 1 1 auto;
+		}
+	}
+	// .achievements-welcome__image
+	&__image {
+		flex: 0 0 toRem(39);
+		img {
+			width: toRem(39);
+			height: toRem(39);
+		}
+	}
+	// .achievements-welcome__body
+	&__body {
+	}
+	// .achievements-welcome__title
+	&__title {
+		font-size: toRem(20);
+		font-weight: 600;
+		line-height: 1.5; /* 30/20 */
+	}
+	// .achievements-welcome__text
+	&__text {
+		font-size: toRem(16);
+		line-height: 1.35;
+	}
+}
+.button {
 }
