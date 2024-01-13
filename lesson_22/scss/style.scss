@@ -96,6 +96,10 @@ body {
 	display: flex;
 	align-items: center;
 	gap: toRem(6);
+	text-transform: capitalize;
+	&--center {
+		justify-content: center;
+	}
 	&::before {
 		content: "";
 		width: toRem(12);
@@ -107,6 +111,10 @@ body {
 	color: $darkGreyColor;
 	font-family: "Poppins";
 	font-weight: 700;
+	text-transform: capitalize;
+	&--center {
+		text-align: center;
+	}
 }
 .text {
 	color: $lightGrayColor;
@@ -602,8 +610,6 @@ body {
 		}
 	}
 }
-.title {
-}
 .right-side-welcome {
 	flex: 1 1 55%;
 	@media (max-width: toEm(991.98)) {
@@ -646,10 +652,6 @@ body {
 			min-width: 100%;
 		}
 	}
-}
-.label {
-}
-.text {
 }
 .services-welcome {
 	&:not(:last-child) {
@@ -716,5 +718,364 @@ body {
 		line-height: 1.35;
 	}
 }
-.button {
+//========================================================================================================================================================
+.brands {
+	@include adaptiveValue("padding-top", 100, 40);
+	@include adaptiveValue("padding-bottom", 40, 20);
+	// .brands__container
+	&__container {
+	}
+	// .brands__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(toRem(135), 1fr));
+		@include adaptiveValue("gap", 115, 20, 0, $containerWidth, 991.98);
+		grid-template-rows: 1fr;
+		@include adaptiveValue("padding-left", 40, 0);
+		@include adaptiveValue("padding-right", 40, 0);
+	}
+	// .brands__item
+	&__item {
+		display: inline-block;
+		position: relative;
+		padding-bottom: 58.823529%; /* 100/170 */
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			transition: transform 0.3s;
+			@media (any-hover: hover) {
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+.provide {
+	@include adaptiveValue("padding-top", 40, 20);
+	@include adaptiveValue("padding-bottom", 130, 40);
+	// .provide__container
+	&__container {
+	}
+	// .provide__label
+	&__label {
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+	// .provide__title
+	&__title {
+		@include adaptiveValue("font-size", 40, 30);
+		line-height: 1.21;
+		max-width: toRem(495);
+		margin: 0 auto;
+		&:not(:last-child) {
+			margin-bottom: toRem(40);
+		}
+	}
+	// .provide__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(toRem(385), 1fr));
+		grid-auto-rows: 1fr;
+		column-gap: toRem(32);
+		row-gap: toRem(27);
+		@media (max-width: toEm(425)) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// .provide__item
+	&__item {
+	}
+	&__button-link {
+		background-color: $blueColor;
+		color: $whiteColor;
+		@include adaptiveValue("font-size", 25, 18);
+		font-weight: 600;
+		line-height: 1.2%; /* 30/25 */
+		text-transform: capitalize;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $greenColor;
+			}
+		}
+	}
+}
+.item-provide {
+	background-color: $whiteGrayColor;
+	@include adaptiveValue("padding", 30, 10);
+	@include adaptiveValue("gap", 58, 20);
+	justify-content: space-between;
+	display: flex;
+	// .item-provide__body
+	&__body {
+	}
+	// .item-provide__title
+	&__title {
+		@include adaptiveValue("font-size", 25, 20);
+		font-weight: 600;
+		line-height: 1, 27;
+		text-transform: capitalize;
+		&:not(:last-child) {
+			margin-bottom: toRem(27);
+		}
+	}
+	// .item-provide__link
+	&__link {
+		display: inline-flex;
+		font-weight: 600;
+		line-height: 1.22; /* 22/18 */
+		text-transform: capitalize;
+		color: $blueColor;
+		transition: text-decoration 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	// .item-provide__image
+	&__image {
+		flex: 0 0 toRem(72);
+		width: toRem(72);
+		height: toRem(72);
+		border-radius: 50%;
+		background-color: $greenColor;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: toRem(42);
+			height: toRem(42);
+		}
+	}
+}
+//========================================================================================================================================================
+.work {
+	background-color: $blueColor;
+	@include adaptiveValue("padding-top", 120, 30);
+	@include adaptiveValue("padding-bottom", 120, 30);
+	// .work__container
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: toRem(50);
+		@media (max-width: toEm(991.98)) {
+			grid-template-columns: auto;
+		}
+	}
+}
+.how-we-work {
+	// .how-we-work__label
+	&__label {
+		color: $whiteColor;
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+	// .how-we-work__title
+	&__title {
+		color: $whiteColor;
+		@include adaptiveValue("font-size", 40, 30);
+		font-weight: 700;
+		line-height: 1.21; /* 48.4px */
+		max-width: toRem(430);
+		&:not(:last-child) {
+			margin-bottom: toRem(21);
+		}
+	}
+	// .how-we-work__text
+	&__text {
+		color: $whiteColor;
+		&:not(:last-child) {
+			margin-bottom: toRem(34);
+		}
+	}
+	// .how-we-work__counter
+	&__counter {
+	}
+	// .how-we-work__list
+	&__list {
+	}
+}
+.counter {
+	display: flex;
+	flex-wrap: wrap;
+	gap: toRem(23);
+	align-items: center;
+	background-color: $greenColor;
+	@include adaptiveValue("padding", 35, 15);
+	&:not(:last-child) {
+		margin-bottom: toRem(50);
+	}
+	@media (max-width: toEm(1240.98)) {
+		justify-content: center;
+	}
+	// .counter__body
+	&__body {
+		flex: 0 0 toRem(128);
+		width: toRem(128);
+		height: toRem(128);
+		border-radius: 50%;
+		border: toRem(3) solid $blueColor;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $whiteColor;
+		font-family: "Poppins";
+	}
+	// .counter__number
+	&__number {
+		font-size: toRem(35);
+		font-weight: 700;
+		line-height: 1.21;
+	}
+	&__label {
+		font-weight: 600;
+		line-height: 1.5; /* 27/18 */
+	}
+	// .counter__text
+	&__text {
+		flex: 0 1 toRem(360);
+		color: $whiteColor;
+		font-family: "Poppins";
+		font-size: toRem(25);
+		line-height: 1.27; /* 31.75px */
+		span {
+			font-weight: 700;
+		}
+		@media (max-width: toEm(1240.98)) {
+			text-align: center;
+		}
+	}
+}
+.list-work {
+	max-width: toRem(515);
+	@media (max-width: toEm(991.98)) {
+		max-width: 100%;
+	}
+	// .list-work__item
+	&__item {
+		display: flex;
+		gap: toRem(16);
+		&:not(:last-child) {
+			margin-bottom: toRem(18);
+			padding-bottom: toRem(21);
+			border-bottom: toRem(1) solid $whiteColor;
+		}
+	}
+	&__body {
+	}
+	// .list-work__title
+	&__title {
+		color: $whiteColor;
+		font-size: toRem(22);
+		font-weight: 600;
+		line-height: 1.5; /* 33/22 */
+	}
+	// .list-work__text
+	&__text {
+		color: $whiteColor;
+		line-height: 1.46;
+	}
+	&__icon {
+		&::before {
+			color: $greenColor;
+			font-size: toRem(22);
+			line-height: 1.5;
+		}
+	}
+}
+.book-now {
+	// .book-now__label
+	&__label {
+		color: $whiteColor;
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+	// .book-now__title
+	&__title {
+		color: $whiteColor;
+		@include adaptiveValue("font-size", 40, 30);
+		font-weight: 700;
+		line-height: 1.21; /* 48.4px */
+		max-width: toRem(365);
+		&:not(:last-child) {
+			margin-bottom: toRem(21);
+		}
+	}
+	// .book-now__form
+	&__form {
+	}
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(30);
+	@include adaptiveValue("padding", 58, 15);
+	background-color: $whiteColor;
+	input,
+	textarea {
+		border: 1px solid #ddd;
+		background-color: #f8f8f8;
+	}
+	input {
+		height: toRem(65);
+		width: 100%;
+		padding-left: toRem(33);
+		padding-right: toRem(33);
+	}
+	// .form__name
+	&__name {
+	}
+	// .form__mail
+	&__mail {
+	}
+	// .form__phone
+	&__phone {
+	}
+	// .form__wrapper
+	&__wrapper {
+		display: flex;
+		gap: toRem(23);
+		flex-wrap: wrap;
+		input {
+			flex: 0 1 toRem(220);
+			@media (max-width: toEm(1238)) {
+				flex: 1 1 auto;
+			}
+		}
+	}
+	// .form__date
+	&__date {
+	}
+	// .form__time
+	&__time {
+	}
+	// .form__textarea
+	&__textarea {
+		width: 100%;
+		min-height: 140px;
+		padding: 11px 33px;
+		resize: vertical;
+	}
+	// .form__button
+	&__button {
+		align-self: flex-start;
+		padding: toRem(21) toRem(61);
+		@media (max-width: toEm(425)) {
+			align-self: stretch;
+		}
+	}
 }
