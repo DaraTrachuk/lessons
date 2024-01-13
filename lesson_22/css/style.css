@@ -293,7 +293,6 @@ body {
   color: #37393f;
   font-family: "Poppins";
   font-weight: 700;
-  text-transform: capitalize;
 }
 .title--center {
   text-align: center;
@@ -1690,7 +1689,7 @@ body {
 }
 .item-provide__title {
   font-weight: 600;
-  line-height: 1, 27;
+  line-height: 1.27;
   text-transform: capitalize;
 }
 @media (min-width: 78.125em) {
