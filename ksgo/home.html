@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240220213144">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240222153514">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,21 +22,40 @@
 					</a>
 					<div class="header__menu menu">
 						<button data-da=".social-header, 450.98" type="button" class="menu__icon icon-menu"><span></span></button>
-						<div class="menu__label">Меню</div>
+						<div class="menu__label">Menu</div>
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a href="#" class="menu__link link">Выкуп</a></li>
-								<li class="menu__item"><a href="#" class="menu__link link">Доставка</a></li>
-								<li class="menu__item"><a href="#" class="menu__link link">Услуги</a></li>
-								<li class="menu__item"><a href="#" class="menu__link link">О нас</a></li>
-								<li class="menu__item"><a href="#" class="menu__link link">Контакты</a></li>
-								<li class="menu__item"><a href="#" class="menu__link link">Партнеры</a></li>
+								<li class="menu__item"><a href="#" class="menu__link link">Buyback</a></li>
+								<li class="menu__item"><a href="#" class="menu__link link">Delivery</a></li>
+								<li class="menu__item"><a href="#" class="menu__link link">Services</a></li>
+								<li class="menu__item"><a href="#" class="menu__link link">About Us</a></li>
+								<li class="menu__item"><a href="#" class="menu__link link">Contacts</a></li>
+								<li class="menu__item"><a href="#" class="menu__link link">Partners</a></li>
 							</ul>
+							<div class="menu__block-mobile block-mobile-menu">
+								<div class="block-mobile-menu__exchange-rates exchange-rates-mobile">
+									<h4 class="exchange-rates-mobile__title title">Exchange Rates</h4>
+									<div class="exchange-rates-mobile__item">1 ¥ = <span>12,53 $</span></div>
+									<div class="exchange-rates-mobile__item">1 $ = <span>92,02 $</span></div>
+								</div>
+								<div class="block-mobile-menu__action action-mobile">
+									<div class="action-mobile__label">Contact us</div>
+									<a href="tel:89222927772" class="action-mobile__tel">8-922-292-777-2</a>
+								</div>
+								<div class="block-mobile-menu__social social-mobile">
+									<a href="#" class="social-mobile__item">
+										<img src="img/header/telegram.svg" alt="Telegram">
+									</a>
+									<a href="#" class="social-mobile__item">
+										<img src="img/header/watsapp.svg" alt="WatsApp">
+									</a>
+								</div>
+							</div>
 						</nav>
 					</div>
 					<div class="header__exchange-rates exchange-rates">
-						<div class="exchange-rates__item">1 ¥ = <span>12,53 ₽</span></div>
-						<div class="exchange-rates__item">1 $ = <span>92,02 ₽</span></div>
+						<div class="exchange-rates__item">1 ¥ = <span>12,53 $</span></div>
+						<div class="exchange-rates__item">1 $ = <span>92,02 $</span></div>
 					</div>
 					<div class="header__social social-header">
 						<a href="#" class="social-header__item">
@@ -47,20 +66,122 @@
 						</a>
 					</div>
 					<div class="header__action action-header">
-						<div class="action-header__label">Свяжитесь с нами</div>
+						<div class="action-header__label">Contact us</div>
 						<a href="tel:89222927772" class="action-header__tel">8-922-292-777-2</a>
 					</div>
 				</div>
 			</div>
 		</header>
 		<main class="page">
+			<div class="page__hero hero">
+				<!-- Оболонка слайдера -->
+				<div class="hero__slider swiper">
+					<!-- Частина слайдера, що рухається -->
+					<div class="hero__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="hero__slide swiper-slide">
+							<div class="hero__container">
+								<div class="hero__body">
+									<h2 class="hero__title">Cargo delivery from China</h2>
+									<div class="hero__text">
+										<p>
+											We offer a full range of services - from purchasing goods from manufacturing factories in China to delivering them to the end consumer.
+										</p>
+									</div>
+									<a href="#" class="hero__button button">To get a consultation</a>
+								</div>
+							</div>
+							<div class="swiper-slide__image">
+								<picture><source srcset="img/hero/hero.webp" type="image/webp"><img src="img/hero/hero.jpg" alt="Hero 1"></picture>
+							</div>
+						</div>
+						<div class="hero__slide swiper-slide">
+							<div class="hero__container">
+								<div class="hero__body">
+									<h2 class="hero__title">Cargo delivery from China</h2>
+									<div class="hero__text">
+										<p>
+											We offer a full range of services - from purchasing goods from manufacturing factories in China to delivering them to the end consumer.
+										</p>
+									</div>
+									<a href="#" class="hero__button button">To get a consultation</a>
+								</div>
+							</div>
+							<div class="swiper-slide__image">
+								<picture><source srcset="img/hero/hero_2.webp" type="image/webp"><img src="img/hero/hero_2.jpg" alt="Hero 2"></picture>
+							</div>
+						</div>
+					</div>
+					<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+					<div class="hero__navigation">
+						<button type="button" class="hero-button-prev">
+							<svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13 5L1 5M1 5L5 9M1 5L5 1" stroke-width="1.25" stroke-linecap="round" />
+							</svg>
+						</button>
+						<button type="button" class="hero-button-next">
+							<svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 5L13 5M13 5L9 9M13 5L9 1" stroke-width="1.25" stroke-linecap="round" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<section class="page__about-us about-us">
+				<div class="about-us__container">
+					<div class="about-us__content">
+						<div class="about-us__item">
+							<div class="about-us__label label">About Us</div>
+							<h1 class="about-us__title title">Our company is an expert in the field of logistics services</h1>
+						</div>
+						<div class="about-us__item-text">
+							<div class="about-us__text">
+								<p>
+									Already more than 10 years of work in the market. During this period, we have formed stable partnerships with manufacturing enterprises, having thoroughly checked their reliability and reputation. We offer a full range of logistics solutions for the delivery of goods from China.
+								</p>
+								<p>
+									Our main goal is to provide high quality logistics and maintenance services. By choosing our company, you get a reliable partner offering the optimal combination of price and quality.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__our-services our-services">
+				<div class="our-services__container">
+					<div class="our-services__header">
+						<div class="our-services__label label">Our services</div>
+						<h2 class="our-services__title title">
+							We provide a full range of logistics services for the delivery of goods from China
+						</h2>
+					</div>
+					<div class="our-services__slider swiper">
+						<div class="our-services__wrapper swiper-wrapper">
+							<div class="our-services__slide swiper-slide">
+								<div class="our-services__content-card">
+									<div class="our-services__icon">
+										<img src="img/our-services/icon_1.svg" alt="Icon 1">
+									</div>
+									<h4 class="our-services__title">Redemption of goods</h4>
+								</div>
+								<div class="our-services__content-card">
+									<div class="our-services__icon">
+										<img src="img/our-services/icon_2.svg" alt="Icon 2">
+									</div>
+									<h4 class="our-services__title">Redemption of goods</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240220213144"></script>
+	<script src="js/app.min.js?_v=20240222153514"></script>
 </body>
 
 </html>
