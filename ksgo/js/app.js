@@ -3678,6 +3678,7 @@
             slidesPerView: 1,
             spaceBetween: 0,
             speed: 800,
+            loop: true,
             effect: "fade",
             autoplay: {
                 delay: 3e3,
@@ -3689,54 +3690,76 @@
             },
             on: {}
         });
-    }
-    window.addEventListener("DOMContentLoaded", (() => {
-        const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-            let swiper;
-            breakpoint = window.matchMedia(breakpoint);
-            const enableSwiper = function(className, settings) {
-                swiper = new swiper_core_Swiper(className, settings);
-                if (callback) callback(swiper);
-            };
-            const checker = function() {
-                if (breakpoint.matches) return enableSwiper(swiperClass, swiperSettings); else {
-                    if (swiper !== void 0) swiper.destroy(true, true);
-                    return;
+        if (document.querySelector(".our-services__slider")) resizableSwiper("(max-width: 767.98px)", ".our-services__slider", {
+            modules: [ Navigation, Grid ],
+            navigation: {
+                prevEl: ".our-services-button-prev",
+                nextEl: ".our-services-button-next"
+            },
+            loop: true,
+            grid: {
+                rows: 2
+            },
+            spaceBetween: 24,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    grid: {
+                        rows: 1
+                    }
+                },
+                640: {
+                    slidesPerView: 2
                 }
-            };
-            breakpoint.addEventListener("change", checker);
-            checker();
-        };
-        const someFunc = instance => {
-            if (instance) instance.on("slideChange", (function(e) {
-                console.log("*** mySwiper.activeIndex", instance.activeIndex);
-            }));
-        };
-        resizableSwiper("(max-width: 767.98px)", ".our-services__slider", {
-            modules: [ Navigation, Grid ],
-            loop: true,
-            spaceBetween: 24,
-            slidesPerView: 2,
-            navigation: {
-                prevEl: ".our-services-button-prev",
-                nextEl: ".our-services-button-next"
             }
-        }, someFunc);
-        resizableSwiper("(max-width: 640.98px)", ".our-services__slider", {
-            modules: [ Navigation, Grid ],
-            loop: true,
-            spaceBetween: 24,
-            slidesPerView: 1,
-            navigation: {
-                prevEl: ".our-services-button-prev",
-                nextEl: ".our-services-button-next"
+        });
+    }
+    const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+        let swiper;
+        breakpoint = window.matchMedia(breakpoint);
+        const enableSwiper = function(className, settings) {
+            swiper = new swiper_core_Swiper(className, settings);
+            if (callback) callback(swiper);
+        };
+        const checker = function() {
+            if (breakpoint.matches) return enableSwiper(swiperClass, swiperSettings); else {
+                if (swiper !== void 0) swiper.destroy(true, true);
+                return;
             }
-        }, someFunc);
-    }));
+        };
+        breakpoint.addEventListener("change", checker);
+        checker();
+    };
     window.addEventListener("load", (function(e) {
         initSliders();
     }));
     let addWindowScrollEvent = false;
+    function headerScroll() {
+        addWindowScrollEvent = true;
+        const header = document.querySelector("header.header");
+        const headerShow = header.hasAttribute("data-scroll-show");
+        const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
+        const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
+        let scrollDirection = 0;
+        let timer;
+        document.addEventListener("windowScroll", (function(e) {
+            const scrollTop = window.scrollY;
+            clearTimeout(timer);
+            if (scrollTop >= startPoint) {
+                !header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
+                if (headerShow) {
+                    if (scrollTop > scrollDirection) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null; else !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                    timer = setTimeout((() => {
+                        !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                    }), headerShowTimer);
+                }
+            } else {
+                header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
+                if (headerShow) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+            }
+            scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
+        }));
+    }
     setTimeout((() => {
         if (addWindowScrollEvent) {
             let windowScroll = new Event("windowScroll");
@@ -3848,4 +3871,5 @@
     window["FLS"] = true;
     isWebp();
     menuInit();
+    headerScroll();
 })();
