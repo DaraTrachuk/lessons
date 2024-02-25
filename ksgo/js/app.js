@@ -3710,9 +3710,6 @@
                 },
                 1440: {
                     slidesPerView: 4.2
-                },
-                "(max-width: 1440px)": {
-                    slidesPerView: 4.2
                 }
             },
             on: {}
