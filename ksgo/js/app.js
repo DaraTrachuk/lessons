@@ -3691,17 +3691,25 @@
             on: {}
         });
         if (document.querySelector(".cargo__slider")) new swiper_core_Swiper(".cargo__slider", {
-            modules: [ Navigation, Autoplay, EffectFade ],
+            modules: [ Navigation ],
             observer: true,
             observeParents: true,
-            slidesPerView: 4,
             spaceBetween: 24,
             speed: 800,
-            loop: true,
-            effect: "fade",
             navigation: {
                 prevEl: ".cargo-button-prev",
                 nextEl: ".cargo-button-next"
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.5
+                },
+                768: {
+                    slidesPerView: 2.3
+                },
+                1440: {
+                    slidesPerView: 4.2
+                }
             },
             on: {}
         });

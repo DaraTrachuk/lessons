@@ -435,7 +435,7 @@ body {
 .hero-button-prev {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #f2f3f7;
+  background-color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -484,7 +484,10 @@ body {
 }
 .our-services__icon {
   width: 6rem;
-  height: 6rem
+  height: 6rem;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s,-webkit-transform .3s
 }
 .our-services__icon img {
   width: 100%;
@@ -594,9 +597,10 @@ body {
 }
 .items-team__item {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
-  align-items: center
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1.25rem
 }
 .items-team__body {
   flex-grow: 1
@@ -608,24 +612,55 @@ body {
 }
 .items-team__image {
   aspect-ratio: 180/180;
-  width: 30.612245%;
-  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: 1.25rem
+  border-radius: 1.25rem;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s,-webkit-transform .3s
+}
+.cargo__header {
+  max-width: 49.375rem
+}
+.cargo__label:not(:last-child) {
+  margin-bottom: .75rem
+}
+.cargo__title {
+  font-size: 1.5rem
 }
 .cargo__slider {
-  overflow: visible
+  overflow: visible;
+  position: relative
 }
 .cargo__slide {
   max-width: 17.625rem
 }
 .cargo__slide img {
+  border-radius: 1.25rem;
   aspect-ratio: 282/340;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover
+}
+.cargo__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem
+}
+.cargo-button-next,
+.cargo-button-prev {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: #14171f;
+  transition: background-color .3s
 }
 .items-tariffs {
   display: flex;
@@ -715,6 +750,9 @@ body {
 }
 .swiper {
   overflow: hidden
+}
+.swiper--visible {
+  overflow: visible
 }
 .swiper-initialized {
   touch-action: pan-y
@@ -895,6 +933,12 @@ body {
   .items-team__name:not(:last-child) {
     margin-bottom: 1.25rem
   }
+  .cargo__header:not(:last-child) {
+    margin-bottom: 4.0625rem
+  }
+  .cargo__title {
+    font-size: 2.5rem
+  }
   .items-tariffs__header:not(:last-child) {
     margin-bottom: 2rem
   }
@@ -927,6 +971,14 @@ body {
   }
   .contacts__map iframe {
     min-height: 26.25rem
+  }
+}
+@media (min-width:40em) {
+  .cargo__navigation {
+    position: absolute;
+    top: -8.125rem;
+    right: 0;
+    padding-top: 0
   }
 }
 @media (max-width:48em) {
@@ -1055,6 +1107,12 @@ body {
   }
   .items-team__name:not(:last-child) {
     margin-bottom: 1rem
+  }
+  .cargo__header:not(:last-child) {
+    margin-bottom: 1.25rem
+  }
+  .cargo__title {
+    font-size: 2.1875rem
   }
   .items-tariffs__header:not(:last-child) {
     margin-bottom: 1.5rem
@@ -1253,6 +1311,11 @@ body {
     grid-template-columns: auto
   }
 }
+@media (max-width:47.9375em) {
+  .cargo__slide {
+    max-width: 15.1875rem
+  }
+}
 @media (max-width:43.68625em) {
   .exchange-rates {
     display: none
@@ -1281,6 +1344,11 @@ body {
   .content-advantages__item:nth-child(2) .content-advantages__image {
     -o-object-position: 12% 0;
     object-position: 12% 0
+  }
+}
+@media (max-width:38.75em) {
+  .cargo__slide {
+    max-width: 11.25rem
   }
 }
 @media (max-width:30.37375em) {
@@ -1317,7 +1385,7 @@ body {
 }
 @media (max-width:23.75em) {
   .items-team__image {
-    aspect-ratio: 90/90
+    max-width: 5.625rem
   }
 }
 @media (min-width:20em) and (max-width:76.875em) {
@@ -1671,6 +1739,26 @@ body {
       margin-bottom: calc(1rem + .25 * (100vw - 20rem)/ 56.875)
     }
   }
+  @supports (margin-bottom:clamp(1.25rem ,0.260989011rem + 4.9450549451vw ,4.0625rem)) {
+    .cargo__header:not(:last-child) {
+      margin-bottom: clamp(1.25rem ,.260989011rem + 4.9450549451vw ,4.0625rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(1.25rem ,0.260989011rem + 4.9450549451vw ,4.0625rem)) {
+    .cargo__header:not(:last-child) {
+      margin-bottom: calc(1.25rem + 2.8125 * (100vw - 20rem)/ 56.875)
+    }
+  }
+  @supports (font-size:clamp(2.1875rem ,2.0776098901rem + 0.5494505495vw ,2.5rem)) {
+    .cargo__title {
+      font-size: clamp(2.1875rem ,2.0776098901rem + .5494505495vw ,2.5rem)
+    }
+  }
+  @supports not (font-size:clamp(2.1875rem ,2.0776098901rem + 0.5494505495vw ,2.5rem)) {
+    .cargo__title {
+      font-size: calc(2.1875rem + .3125 * (100vw - 20rem)/ 56.875)
+    }
+  }
   @supports (margin-bottom:clamp(1.5rem ,1.3241758242rem + 0.8791208791vw ,2rem)) {
     .items-tariffs__header:not(:last-child) {
       margin-bottom: clamp(1.5rem ,1.3241758242rem + .8791208791vw ,2rem)
@@ -1917,6 +2005,19 @@ body {
   }
   .hero-button-next:hover,
   .hero-button-prev:hover {
+    stroke: #f2f3f7;
+    background-color: #69c647
+  }
+  .our-services__content-card:hover .our-services__icon {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+  }
+  .items-team__image:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+  }
+  .cargo-button-next:hover,
+  .cargo-button-prev:hover {
     stroke: #f2f3f7;
     background-color: #69c647
   }
