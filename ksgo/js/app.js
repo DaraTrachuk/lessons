@@ -3690,6 +3690,21 @@
             },
             on: {}
         });
+        if (document.querySelector(".cargo__slider")) new swiper_core_Swiper(".cargo__slider", {
+            modules: [ Navigation, Autoplay, EffectFade ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 4,
+            spaceBetween: 24,
+            speed: 800,
+            loop: true,
+            effect: "fade",
+            navigation: {
+                prevEl: ".cargo-button-prev",
+                nextEl: ".cargo-button-next"
+            },
+            on: {}
+        });
         if (document.querySelector(".our-services__slider")) resizableSwiper("(max-width: 767.98px)", ".our-services__slider", {
             modules: [ Navigation, Grid ],
             navigation: {
