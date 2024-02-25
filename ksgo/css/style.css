@@ -551,7 +551,8 @@ body {
   align-self: flex-end
 }
 .content-advantages__item:nth-child(2) .content-advantages__image {
-  width: 40.909091%;
+ width: 100%; /* 324/792 */
+			height: 100%;
   aspect-ratio: 324/234;
   -o-object-fit: cover;
   object-fit: cover
