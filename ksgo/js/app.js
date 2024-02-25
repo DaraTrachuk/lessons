@@ -3696,6 +3696,7 @@
             observeParents: true,
             spaceBetween: 24,
             speed: 800,
+            loop: true,
             navigation: {
                 prevEl: ".cargo-button-prev",
                 nextEl: ".cargo-button-next"
@@ -3708,6 +3709,9 @@
                     slidesPerView: 2.3
                 },
                 1440: {
+                    slidesPerView: 4.2
+                },
+                "(max-width: 1440px)": {
                     slidesPerView: 4.2
                 }
             },
