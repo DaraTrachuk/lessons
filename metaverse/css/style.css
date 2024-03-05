@@ -145,6 +145,7 @@ body {
   display: none
 }
 [data-showmore-button] span {
+  margin-top: 1.875rem;
   font-size: 1rem;
   display: inline-flex;
   padding: .375rem .875rem;
@@ -410,8 +411,8 @@ body {
 .hero__image::after {
   content: "";
   background-color: #000;
-  -webkit-filter: blur(6.25rem);
-  filter: blur(6.25rem);
+  -webkit-filter: blur(1.75rem);
+  filter: blur(1.75rem);
   width: 100%;
   height: 28%;
   top: 80%;
@@ -1103,9 +1104,6 @@ body {
     position: absolute;
     top: -95%;
     right: 0
-  }
-  .how-work__items:not(:last-child) {
-    margin-bottom: 1.875rem
   }
 }
 @media (min-width:20em) and (max-width:76.875em) {
