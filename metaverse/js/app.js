@@ -3512,7 +3512,6 @@
             }));
         }));
     }));
-    window["FLS"] = true;
     isWebp();
     menuInit();
     showMore();
