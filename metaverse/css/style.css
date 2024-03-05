@@ -359,7 +359,7 @@ body {
   transition: transform .3s,-webkit-transform .3s
 }
 .hero__container {
-  min-height: 100vh;
+  min-height: 100svh;
   position: relative;
   z-index: 2;
   padding-top: 8.125rem
